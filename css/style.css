@@ -1,0 +1,80 @@
+:root{
+  --ink:#14201d; --paper:#f3f6f2; --line:#d9e0d8; --muted:#4d625d;
+  --green:#2f7d4f; --yellow:#f2c230; --blue:#2a62a8; --red:#c0392b; --black:#22282b;
+  --bolt:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M62 0L22 46h26L18 100l64-62H54L88 0z' fill='white' fill-opacity='.5'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Figtree,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1.0625rem;line-height:1.6}
+h1,h2,h3,.brand__name{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* ---------- En-tête ---------- */
+.site-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:1.25rem 1.5rem 0;background:#fff;border-bottom:6px solid var(--green);border-image:linear-gradient(90deg,var(--green) 20%,var(--yellow) 20% 40%,var(--blue) 40% 60%,var(--red) 60% 80%,var(--black) 80%) 1}
+.bins{display:flex;gap:.6rem;align-items:flex-end}
+
+/* ---------- Poubelles du menu ---------- */
+.bin{--c:var(--green);display:block;width:8.6rem;text-decoration:none;color:#fff;text-align:center;position:relative;transform-origin:50% 100%}
+.bin--green{--c:var(--green)} .bin--yellow{--c:var(--yellow);color:var(--ink)} .bin--blue{--c:var(--blue)} .bin--red{--c:var(--red)} .bin--black{--c:var(--black)}
+.bin__lid{display:block;position:relative;height:.65rem;width:106%;margin-left:-3%;background:var(--c);filter:brightness(.85);border-radius:.3rem .3rem 0 0;transition:transform .3s ease;transform-origin:left bottom}
+.bin__lid::after{content:"";position:absolute;left:50%;top:-.3rem;width:1.6rem;height:.35rem;margin-left:-.8rem;background:inherit;border-radius:.3rem .3rem 0 0}
+.bin__body{display:flex;align-items:center;justify-content:center;min-height:3.6rem;padding:.4rem .9rem .9rem;font-weight:600;font-size:.9rem;line-height:1.2;background:repeating-linear-gradient(90deg,transparent 0 .9rem,rgba(0,0,0,.1) .9rem 1rem),var(--c);clip-path:polygon(0 0,100% 0,91% 100%,9% 100%)}
+.bin[aria-current="page"]::after{content:"";position:absolute;left:12%;right:12%;bottom:-.45rem;height:.25rem;background:var(--c);border-radius:.2rem}
+
+/* Une animation propre à chaque poubelle */
+.bin--green:hover .bin__lid,.bin--green:focus-visible .bin__lid{transform:rotate(-38deg)}
+.bin--yellow:hover,.bin--yellow:focus-visible{animation:shake .5s ease}
+.bin--blue:hover .bin__lid,.bin--blue:focus-visible .bin__lid{transform:translateX(35%)}
+.bin--red:hover,.bin--red:focus-visible{animation:jump .6s ease}
+.bin--black:hover,.bin--black:focus-visible{transform:rotate(-5deg)}
+.bin--black{transition:transform .3s ease}
+.bin--black:hover .bin__lid,.bin--black:focus-visible .bin__lid{transform:rotate(28deg);transform-origin:right bottom}
+@keyframes shake{0%,100%{transform:rotate(0)}20%{transform:rotate(-6deg)}40%{transform:rotate(6deg)}60%{transform:rotate(-4deg)}80%{transform:rotate(3deg)}}
+@keyframes jump{0%,100%{transform:translateY(0)}35%{transform:translateY(-.9rem)}60%{transform:translateY(0)}78%{transform:translateY(-.3rem)}}
+
+/* ---------- Marque ---------- */
+.brand{display:grid;justify-items:end;text-decoration:none;padding-bottom:.9rem}
+.brand__top{display:flex;align-items:center;gap:.7rem}
+.brand__name{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--green)}
+.brand__logo{width:3.2rem;height:3.2rem}
+.brand__slogan{font-size:1rem;font-weight:600;color:var(--muted);font-style:italic}
+
+/* ---------- Bandes image + texte ---------- */
+.band{position:relative;display:flex;min-height:22rem;background:#fff;overflow:hidden}
+.band--reverse{flex-direction:row-reverse}
+.band__img,.band__text{flex:1 1 50%}
+.band__img img{display:block;width:100%;height:100%;object-fit:cover}
+.band__img{clip-path:polygon(0 0,100% 0,93% 18%,100% 36%,92% 54%,100% 72%,93% 88%,98% 100%,0 100%)}
+.band--reverse .band__img{clip-path:polygon(100% 0,0 0,7% 18%,0 36%,8% 54%,0 72%,7% 88%,2% 100%,100% 100%)}
+.bolt{position:absolute;top:0;bottom:0;left:calc(50% - 4.5rem);width:7rem;background:var(--bolt) center/100% 100% no-repeat;pointer-events:none}
+.band--reverse .bolt{transform:scaleX(-1)}
+.band__text{display:flex;flex-direction:column;justify-content:center;padding:2.5rem clamp(1.5rem,5vw,4.5rem);color:#000;background:linear-gradient(135deg,#fff 60%,#eef4ec)}
+.band__text h2{margin:0 0 .75rem;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.1;letter-spacing:-.02em}
+.band__text p{margin:0;max-width:34rem;font-size:1.1rem}
+.band:nth-child(1) .band__text{border-left:.4rem solid var(--green)} .band:nth-child(2) .band__text{border-right:.4rem solid var(--yellow)}
+.band:nth-child(3) .band__text{border-left:.4rem solid var(--blue)} .band:nth-child(4) .band__text{border-right:.4rem solid var(--red)}
+
+/* ---------- Pied de page ---------- */
+.site-footer{background:var(--ink);color:#d6e2dd;margin-top:0}
+.footer__cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:2rem;max-width:68rem;margin:0 auto;padding:3rem 1.5rem 2rem}
+.site-footer h3{margin:0 0 .75rem;color:#fff;font-size:1.1rem}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
+.site-footer a{text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.footer__legal{border-top:1px solid rgba(255,255,255,.15);padding:1.25rem 1.5rem;text-align:center;font-size:.9rem;color:#a9bbb5}
+.footer__legal p{margin:.2rem 0}
+
+/* ---------- Adaptation mobile ---------- */
+@media(max-width:62rem){
+  .site-header{justify-content:center}
+  .brand{justify-items:center;order:-1;width:100%;padding-bottom:0}
+  .bin{width:6.4rem}.bin__body{font-size:.75rem;min-height:3.2rem;padding:.3rem .6rem .7rem}
+}
+@media(max-width:48rem){
+  .band,.band--reverse{flex-direction:column}
+  .band__img,.band--reverse .band__img{clip-path:none;height:14rem}
+  .bolt{display:none}
+  .band .band__text{border:0!important;border-top:.4rem solid var(--green)!important}
+}
+@media(max-width:34rem){.bins{flex-wrap:wrap;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.bin,.bin__lid{animation:none!important;transition:none!important}}
