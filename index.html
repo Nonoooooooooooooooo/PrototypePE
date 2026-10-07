@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3">
-  <script src="js/main.js?v=3" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=4">
+  <script src="js/main.js?v=4" defer></script>
 </head>
 <body>
 
@@ -66,39 +66,62 @@
 </header>
 
 <main>
-  <section class="band">
+  <section class="hero">
+    <div class="hero__inner">
+      <h1>Vos déchets méritent une seconde vie</h1>
+      <p>TriClair collecte, trie et valorise les déchets des particuliers et des professionnels. Un devis gratuit, une réponse sous 48 heures.</p>
+      <div class="hero__actions">
+        <a class="cta" href="contact.html">Demander un devis gratuit</a>
+        <a class="cta cta--ghost" href="offres.html">Voir nos offres</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--yellow">
     <div class="band__img"><img src="images/bande-1.svg" alt="Collecte de déchets triés" width="800" height="600"></div>
     <div class="bolt" aria-hidden="true"></div>
-    <div class="band__text">
-      <h2>Notre mission</h2>
+    <div class="band__text reveal">
+      <h2><span class="band__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg></span>Notre mission</h2>
       <p>Nous collectons vos déchets et les orientons vers la bonne filière. Notre objectif : que chaque matière trouve une seconde vie.</p>
+      <a class="more" href="presentation.html">En savoir plus</a>
     </div>
   </section>
 
-  <section class="band band--reverse">
+  <section class="band band--blue band--reverse">
     <div class="band__img"><img src="images/bande-2.svg" alt="Tri des déchets par matière" width="800" height="600"></div>
     <div class="bolt" aria-hidden="true"></div>
-    <div class="band__text">
-      <h2>Un tri précis, matière par matière</h2>
+    <div class="band__text reveal">
+      <h2><span class="band__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>Un tri précis, matière par matière</h2>
       <p>Verre, papier, emballages, métaux et déchets alimentaires sont séparés avec soin pour garantir un recyclage de qualité.</p>
+      <a class="more" href="trier.html">En savoir plus</a>
     </div>
   </section>
 
-  <section class="band">
+  <section class="band band--green">
     <div class="band__img"><img src="images/bande-3.svg" alt="Valorisation des matières recyclées" width="800" height="600"></div>
     <div class="bolt" aria-hidden="true"></div>
-    <div class="band__text">
-      <h2>Revaloriser, c'est créer de la valeur</h2>
+    <div class="band__text reveal">
+      <h2><span class="band__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v4l2 3v12a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3z"/><path d="M8 13h8"/></svg></span>Revaloriser, c'est créer de la valeur</h2>
       <p>Une matière bien triée devient une ressource : nous la revendons ou la confions à des recycleurs agréés.</p>
+      <a class="more" href="trier.html">En savoir plus</a>
     </div>
   </section>
 
-  <section class="band band--reverse">
+  <section class="band band--red band--reverse">
     <div class="band__img"><img src="images/bande-4.svg" alt="Offres pour particuliers et professionnels" width="800" height="600"></div>
     <div class="bolt" aria-hidden="true"></div>
-    <div class="band__text">
-      <h2>Des offres pour chacun</h2>
+    <div class="band__text reveal">
+      <h2><span class="band__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"/><path d="M7 4c0-1 2-2 5-2s5 1 5 2M7 9h10M7 15h10"/></svg></span>Des offres pour chacun</h2>
       <p>Particulier, commerce ou entreprise : choisissez une collecte régulière ou ponctuelle, adaptée à vos volumes.</p>
+      <a class="more" href="offres.html">En savoir plus</a>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="reveal">
+      <h2>Un devis gratuit sous 48 heures</h2>
+      <p>Décrivez-nous vos besoins, nous revenons vers vous avec une proposition claire.</p>
+      <a class="cta cta--light" href="contact.html">Demander mon devis</a>
     </div>
   </section>
 </main>
