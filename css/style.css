@@ -1,7 +1,7 @@
 :root{
   --ink:#14201d; --paper:#dce9df; --line:#d9e0d8; --muted:#4d625d;
   --green:#2f7d4f; --yellow:#f2c230; --blue:#2a62a8; --red:#c0392b; --black:#22282b;
-  --bolt:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M62 0L22 46h26L18 100l64-62H54L88 0z' fill='white' fill-opacity='.5'/%3E%3C/svg%3E");
+  --bolt:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M62 0L22 46h26L18 100l64-62H54L88 0z' fill='white' fill-opacity='.45' stroke='white' stroke-width='3' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Figtree,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1.0625rem;line-height:1.6}
@@ -47,13 +47,11 @@ a{color:inherit}
 .band__img img{display:block;width:100%;height:100%;object-fit:cover}
 .band__img{clip-path:polygon(0 0,100% 0,93% 18%,100% 36%,92% 54%,100% 72%,93% 88%,98% 100%,0 100%)}
 .band--reverse .band__img{clip-path:polygon(100% 0,0 0,7% 18%,0 36%,8% 54%,0 72%,7% 88%,2% 100%,100% 100%)}
-.bolt{position:absolute;top:0;bottom:0;left:calc(50% - 4.5rem);width:7rem;background:var(--bolt) center/100% 100% no-repeat;pointer-events:none}
+.bolt{position:absolute;top:0;bottom:0;left:calc(50% - 5rem);width:10rem;background:var(--bolt) center/100% 100% no-repeat;filter:drop-shadow(0 0 .6rem rgba(0,0,0,.45));pointer-events:none}
 .band--reverse .bolt{transform:scaleX(-1)}
 .band__text{display:flex;flex-direction:column;justify-content:center;padding:2.5rem clamp(1.5rem,5vw,4.5rem);color:#000;background:linear-gradient(135deg,#fff 60%,#eef4ec)}
 .band__text h2{margin:0 0 .75rem;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.1;letter-spacing:-.02em}
 .band__text p{margin:0;max-width:34rem;font-size:1.1rem}
-.band:nth-child(1) .band__text{border-left:.4rem solid var(--green)} .band:nth-child(2) .band__text{border-right:.4rem solid var(--yellow)}
-.band:nth-child(3) .band__text{border-left:.4rem solid var(--blue)} .band:nth-child(4) .band__text{border-right:.4rem solid var(--red)}
 
 /* ---------- Pied de page ---------- */
 .site-footer{background:var(--ink);color:#d6e2dd;margin-top:0}
@@ -75,7 +73,39 @@ a{color:inherit}
   .band,.band--reverse{flex-direction:column}
   .band__img,.band--reverse .band__img{clip-path:none;height:14rem}
   .bolt{display:none}
-  .band .band__text{border:0!important;border-top:.4rem solid var(--green)!important}
+  .band .band__text{border:0!important;border-top:.4rem solid var(--c)!important}
 }
 @media(max-width:34rem){.bins{flex-wrap:wrap;justify-content:center;height:auto;clip-path:none;padding-bottom:.9rem}}
 @media(prefers-reduced-motion:reduce){.bin,.bin__lid{animation:none!important;transition:none!important}}
+
+/* ---------- Titre d'accueil ---------- */
+.hero{padding:clamp(2.5rem,7vw,5rem) 1.5rem}
+.hero__inner{max-width:68rem;margin:0 auto}
+.hero h1{margin:0 0 1rem;max-width:18ch;font-size:clamp(2.3rem,6vw,4.2rem);line-height:1.05;letter-spacing:-.03em;font-weight:800}
+.hero p{margin:0 0 1.75rem;max-width:38rem;font-size:1.2rem;color:var(--muted)}
+.hero__actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.cta{display:inline-block;padding:.85rem 1.6rem;border-radius:.5rem;background:var(--green);color:#fff;font-weight:600;text-decoration:none;border:2px solid var(--green);transition:filter .2s}
+.cta:hover{filter:brightness(1.12)}
+.cta--ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.cta--light{background:#fff;color:var(--ink);border-color:#fff}
+
+/* ---------- Bandes : couleur, badge, lien ---------- */
+.band{--c:var(--green)}
+.band--yellow{--c:var(--yellow)} .band--blue{--c:var(--blue)} .band--green{--c:var(--green)} .band--red{--c:var(--red)}
+.band__text{border-left:.4rem solid var(--c)}
+.band--reverse .band__text{border-left:0;border-right:.4rem solid var(--c)}
+.band__text h2{display:flex;align-items:center;gap:.8rem}
+.band__badge{flex:none;display:grid;place-items:center;width:2.8rem;height:2.8rem;border-radius:50%;background:var(--c)}
+.band__badge svg{width:1.6rem;height:1.6rem;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px rgba(0,0,0,.4))}
+.more{align-self:flex-start;margin-top:1rem;color:#000;font-weight:600;text-decoration:none;border-bottom:.2rem solid var(--c);transition:border-width .15s}
+.more:hover{border-bottom-width:.4rem}
+
+/* ---------- Bande finale ---------- */
+.cta-band{padding:4rem 1.5rem;text-align:center;color:#fff;background:linear-gradient(135deg,#1f6b4c,#124230)}
+.cta-band h2{margin:0 0 .6rem;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.02em;line-height:1.1}
+.cta-band p{margin:0 auto 1.5rem;max-width:34rem;font-size:1.15rem;color:#d6e8de}
+
+/* ---------- Apparition au défilement ---------- */
+.js .reveal{opacity:0;transform:translateY(1.5rem);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
