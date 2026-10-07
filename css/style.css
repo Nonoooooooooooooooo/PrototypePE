@@ -21,7 +21,6 @@ a{color:inherit}
 .bin__body{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:.25rem;min-height:7rem;padding:.45rem .4rem 1rem;background:linear-gradient(90deg,rgba(0,0,0,.22),transparent 14%,transparent 80%,rgba(0,0,0,.2)),linear-gradient(180deg,rgba(0,0,0,.18),transparent .6rem),var(--c);border-radius:0 0 .5rem .5rem;clip-path:polygon(0 0,100% 0,96% 100%,4% 100%)}
 .bin__icon{width:1.9rem;height:1.9rem;color:#fff;filter:drop-shadow(0 1px 1px rgba(0,0,0,.4));fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .bin__label{display:block;background:rgba(255,255,255,.93);color:var(--ink);font-weight:600;font-size:.8rem;line-height:1.15;padding:.2rem .45rem;border-radius:.3rem;text-align:center}
-.bin[aria-current="page"]{filter:drop-shadow(0 0 .55rem rgba(255,255,255,.75)) drop-shadow(0 .35rem .3rem rgba(0,0,0,.45))}
 
 /* Une animation propre à chaque poubelle */
 .bin--green:hover .bin__lid,.bin--green:focus-visible .bin__lid{transform:rotate(-38deg)}
