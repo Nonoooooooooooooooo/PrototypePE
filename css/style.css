@@ -10,7 +10,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 
 /* ---------- En-tête ---------- */
-.site-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:1.1rem 1.5rem 0;background:radial-gradient(ellipse at 15% 0,#3f9468 0,transparent 65%),linear-gradient(180deg,#1f6b4c,#124230);border-bottom:8px solid var(--green);border-image:linear-gradient(90deg,var(--green) 20%,var(--yellow) 20% 40%,var(--blue) 40% 60%,var(--red) 60% 80%,var(--black) 80%) 1;box-shadow:0 .6rem 1.2rem rgba(0,0,0,.25);position:relative;z-index:2}
+.site-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:.5rem 1.5rem 0;background:radial-gradient(ellipse at 15% 0,#3f9468 0,transparent 65%),linear-gradient(180deg,#1f6b4c,#124230) #1a5c42;border-bottom:8px solid var(--green);border-image:linear-gradient(90deg,var(--green) 20%,var(--yellow) 20% 40%,var(--blue) 40% 60%,var(--red) 60% 80%,var(--black) 80%) 1;box-shadow:0 .6rem 1.2rem rgba(0,0,0,.25);position:relative;z-index:2}
 .bins{display:flex;gap:.9rem;align-items:flex-start;height:5.3rem;clip-path:inset(-3rem -2rem 0 -2rem)}
 
 /* ---------- Poubelles du menu (bacs roulants carrés) ---------- */
@@ -35,11 +35,11 @@ a{color:inherit}
 @keyframes jump{0%,100%{transform:translateY(0)}35%{transform:translateY(-.9rem)}60%{transform:translateY(0)}78%{transform:translateY(-.3rem)}}
 
 /* ---------- Marque ---------- */
-.brand{display:grid;justify-items:end;text-decoration:none;padding-bottom:.9rem}
+.brand{display:grid;justify-items:end;align-self:center;text-decoration:none}
 .brand__top{display:flex;align-items:center;gap:.8rem}
-.brand__name{font-size:clamp(2.6rem,6vw,4.2rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:#fff;text-shadow:0 .15rem 0 var(--green)}
-.brand__logo{width:3.8rem;height:3.8rem;filter:drop-shadow(0 0 .5rem rgba(255,255,255,.35))}
-.brand__slogan{font-size:1.05rem;font-weight:600;color:var(--yellow);font-style:italic}
+.brand__name{font-size:clamp(2.2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:#fff;text-shadow:0 .15rem 0 var(--green)}
+.brand__logo{width:3rem;height:3rem;filter:drop-shadow(0 0 .5rem rgba(255,255,255,.35))}
+.brand__slogan{font-size:.95rem;font-weight:600;color:var(--yellow);font-style:italic}
 
 /* ---------- Bandes image + texte ---------- */
 .band{position:relative;display:flex;min-height:22rem;background:#fff;overflow:hidden}
