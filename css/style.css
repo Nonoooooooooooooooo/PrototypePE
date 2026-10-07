@@ -41,7 +41,7 @@ a{color:inherit}
 .brand__slogan{font-size:.95rem;font-weight:600;color:var(--yellow);font-style:italic}
 
 /* ---------- Bandes image + texte ---------- */
-.band{position:relative;display:flex;min-height:22rem;background:#fff;overflow:hidden}
+.band{position:relative;display:flex;min-height:22rem;background:var(--c);overflow:hidden}
 .band--reverse{flex-direction:row-reverse}
 .band__img,.band__text{flex:1 1 50%}
 .band__img img{display:block;width:100%;height:100%;object-fit:cover}
@@ -49,7 +49,7 @@ a{color:inherit}
 .band--reverse .band__img{clip-path:polygon(100% 0,0 0,7% 18%,0 36%,8% 54%,0 72%,7% 88%,2% 100%,100% 100%)}
 .bolt{position:absolute;top:0;bottom:0;left:calc(50% - 5rem);width:10rem;background:var(--bolt) center/100% 100% no-repeat;filter:drop-shadow(0 0 .6rem rgba(0,0,0,.45));pointer-events:none}
 .band--reverse .bolt{transform:scaleX(-1)}
-.band__text{display:flex;flex-direction:column;justify-content:center;padding:2.5rem clamp(1.5rem,5vw,4.5rem);color:#000;background:linear-gradient(135deg,#fff 60%,#eef4ec)}
+.band__text{display:flex;flex-direction:column;justify-content:center;padding:2.5rem clamp(1.5rem,5vw,4.5rem);color:var(--on);background:var(--c);background:linear-gradient(135deg,var(--c) 55%,color-mix(in srgb,var(--c) 78%,#000))}
 .band__text h2{margin:0 0 .75rem;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.1;letter-spacing:-.02em}
 .band__text p{margin:0;max-width:34rem;font-size:1.1rem}
 
@@ -73,7 +73,6 @@ a{color:inherit}
   .band,.band--reverse{flex-direction:column}
   .band__img,.band--reverse .band__img{clip-path:none;height:14rem}
   .bolt{display:none}
-  .band .band__text{border:0!important;border-top:.4rem solid var(--c)!important}
 }
 @media(max-width:34rem){.bins{flex-wrap:wrap;justify-content:center;height:auto;clip-path:none;padding-bottom:.9rem}}
 @media(prefers-reduced-motion:reduce){.bin,.bin__lid{animation:none!important;transition:none!important}}
@@ -90,14 +89,13 @@ a{color:inherit}
 .cta--light{background:#fff;color:var(--ink);border-color:#fff}
 
 /* ---------- Bandes : couleur, badge, lien ---------- */
-.band{--c:var(--green)}
-.band--yellow{--c:var(--yellow)} .band--blue{--c:var(--blue)} .band--green{--c:var(--green)} .band--red{--c:var(--red)}
-.band__text{border-left:.4rem solid var(--c)}
-.band--reverse .band__text{border-left:0;border-right:.4rem solid var(--c)}
+.band{--c:var(--green);--on:#fff}
+.band--yellow{--c:var(--yellow);--on:var(--ink)} .band--blue{--c:var(--blue)} .band--green{--c:var(--green)} .band--red{--c:var(--red)}
 .band__text h2{display:flex;align-items:center;gap:.8rem}
-.band__badge{flex:none;display:grid;place-items:center;width:2.8rem;height:2.8rem;border-radius:50%;background:var(--c)}
-.band__badge svg{width:1.6rem;height:1.6rem;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px rgba(0,0,0,.4))}
-.more{align-self:flex-start;margin-top:1rem;color:#000;font-weight:600;text-decoration:none;border-bottom:.2rem solid var(--c);transition:border-width .15s}
+.band__badge{flex:none;display:grid;place-items:center;width:2.8rem;height:2.8rem;border-radius:50%;background:rgba(255,255,255,.22)}
+.band--yellow .band__badge{background:rgba(0,0,0,.1)}
+.band__badge svg{width:1.6rem;height:1.6rem;fill:none;stroke:var(--on);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.more{align-self:flex-start;margin-top:1rem;color:inherit;font-weight:600;text-decoration:none;border-bottom:.2rem solid currentColor;transition:border-width .15s}
 .more:hover{border-bottom-width:.4rem}
 
 /* ---------- Bande finale ---------- */
