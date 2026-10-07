@@ -1,5 +1,5 @@
 :root{
-  --ink:#14201d; --paper:#f3f6f2; --line:#d9e0d8; --muted:#4d625d;
+  --ink:#14201d; --paper:#dce9df; --line:#d9e0d8; --muted:#4d625d;
   --green:#2f7d4f; --yellow:#f2c230; --blue:#2a62a8; --red:#c0392b; --black:#22282b;
   --bolt:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M62 0L22 46h26L18 100l64-62H54L88 0z' fill='white' fill-opacity='.5'/%3E%3C/svg%3E");
 }
@@ -10,19 +10,20 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 
 /* ---------- En-tête ---------- */
-.site-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:1.75rem 1.5rem 0;background:radial-gradient(ellipse at 20% 0,#2b4a41 0,transparent 60%),linear-gradient(180deg,#16302b,#0f201c);border-bottom:8px solid var(--green);border-image:linear-gradient(90deg,var(--green) 20%,var(--yellow) 20% 40%,var(--blue) 40% 60%,var(--red) 60% 80%,var(--black) 80%) 1;box-shadow:0 .6rem 1.2rem rgba(0,0,0,.25);position:relative;z-index:2}
+.site-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:1.75rem 1.5rem 0;background:radial-gradient(ellipse at 15% 0,#3f9468 0,transparent 65%),linear-gradient(180deg,#1f6b4c,#124230);border-bottom:8px solid var(--green);border-image:linear-gradient(90deg,var(--green) 20%,var(--yellow) 20% 40%,var(--blue) 40% 60%,var(--red) 60% 80%,var(--black) 80%) 1;box-shadow:0 .6rem 1.2rem rgba(0,0,0,.25);position:relative;z-index:2}
 .bins{display:flex;gap:.9rem;align-items:flex-end;padding-bottom:.9rem}
 
-/* ---------- Poubelles du menu ---------- */
-.bin{--c:var(--green);display:block;width:8.6rem;text-decoration:none;color:#fff;text-align:center;position:relative;transform-origin:50% 100%;filter:drop-shadow(0 .35rem .3rem rgba(0,0,0,.45))}
+/* ---------- Poubelles du menu (bacs roulants carrés) ---------- */
+.bin{--c:var(--green);display:block;width:7.8rem;text-decoration:none;color:#fff;position:relative;transform-origin:50% 100%;filter:drop-shadow(0 .35rem .3rem rgba(0,0,0,.45))}
 .bin--green{--c:var(--green)} .bin--yellow{--c:var(--yellow);color:var(--ink)} .bin--blue{--c:var(--blue)} .bin--red{--c:var(--red)} .bin--black{--c:#3a4347}
-.bin__lid{display:block;position:relative;height:1rem;width:112%;margin-left:-6%;background:linear-gradient(180deg,rgba(255,255,255,.35),transparent 55%),var(--c);border-radius:.6rem .6rem .25rem .25rem;box-shadow:inset 0 -.2rem 0 rgba(0,0,0,.25);transition:transform .3s ease;transform-origin:left bottom}
-.bin__lid::after{content:"";position:absolute;left:50%;top:-.45rem;width:2.4rem;height:.6rem;margin-left:-1.2rem;background:var(--c);border-radius:.5rem .5rem 0 0;box-shadow:inset 0 -.15rem 0 rgba(0,0,0,.25)}
-.bin__body{display:flex;align-items:center;justify-content:center;min-height:4.4rem;padding:.5rem 1rem 1.1rem;font-weight:600;font-size:.92rem;line-height:1.2;background:linear-gradient(90deg,rgba(0,0,0,.22),transparent 18%,transparent 70%,rgba(0,0,0,.2)),repeating-linear-gradient(90deg,transparent 0 .8rem,rgba(0,0,0,.13) .8rem .95rem),var(--c);clip-path:polygon(0 0,100% 0,92% 100%,8% 100%);text-shadow:0 1px 2px rgba(0,0,0,.25)}
-.bin--yellow .bin__body{text-shadow:none}
+.bin__lid{display:block;position:relative;height:1.2rem;width:108%;margin-left:-4%;background:linear-gradient(180deg,rgba(255,255,255,.3),transparent 60%),var(--c);border-radius:.5rem .5rem .2rem .2rem;box-shadow:inset 0 -.25rem 0 rgba(0,0,0,.22);transition:transform .3s ease;transform-origin:left bottom}
+.bin__lid::after{content:"";position:absolute;left:50%;bottom:.3rem;width:45%;height:.3rem;margin-left:-22.5%;background:rgba(0,0,0,.3);border-radius:.2rem}
+.bin__body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;min-height:6.4rem;padding:.7rem .5rem 1rem;background:linear-gradient(90deg,rgba(0,0,0,.22),transparent 14%,transparent 80%,rgba(0,0,0,.2)),linear-gradient(180deg,rgba(0,0,0,.18),transparent .6rem),var(--c);border-radius:0 0 .5rem .5rem;clip-path:polygon(0 0,100% 0,96% 100%,4% 100%)}
+.bin__icon{width:2.2rem;height:2.2rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bin__label{display:block;background:rgba(255,255,255,.93);color:var(--ink);font-weight:600;font-size:.8rem;line-height:1.15;padding:.2rem .45rem;border-radius:.3rem;text-align:center}
 .bin::before,.bin::after{content:"";position:absolute;bottom:-.5rem;width:1rem;height:1rem;border-radius:50%;background:#0b0f0e;border:.18rem solid #5d6b66}
-.bin::before{left:16%} .bin::after{right:16%}
-.bin[aria-current="page"]{filter:drop-shadow(0 0 .55rem rgba(255,255,255,.7)) drop-shadow(0 .35rem .3rem rgba(0,0,0,.45))}
+.bin::before{left:12%} .bin::after{right:12%}
+.bin[aria-current="page"]{filter:drop-shadow(0 0 .55rem rgba(255,255,255,.75)) drop-shadow(0 .35rem .3rem rgba(0,0,0,.45))}
 
 /* Une animation propre à chaque poubelle */
 .bin--green:hover .bin__lid,.bin--green:focus-visible .bin__lid{transform:rotate(-38deg)}
@@ -71,7 +72,7 @@ a{color:inherit}
 @media(max-width:62rem){
   .site-header{justify-content:center}
   .brand{justify-items:center;order:-1;width:100%;padding-bottom:0}
-  .bin{width:6.4rem}.bin__body{font-size:.75rem;min-height:3.2rem;padding:.3rem .6rem .7rem}
+  .bin{width:5.6rem}.bin__body{min-height:5rem;padding:.5rem .3rem .8rem}.bin__icon{width:1.6rem;height:1.6rem}.bin__label{font-size:.68rem}
 }
 @media(max-width:48rem){
   .band,.band--reverse{flex-direction:column}
