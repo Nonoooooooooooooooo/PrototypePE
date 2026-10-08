@@ -34,16 +34,29 @@ a{color:inherit}
 @keyframes jump{0%,100%{transform:translateY(0)}35%{transform:translateY(-.9rem)}60%{transform:translateY(0)}78%{transform:translateY(-.3rem)}}
 
 /* ---------- Marque ---------- */
-.brand{display:grid;justify-items:end;align-self:center;text-decoration:none}
-.brand__top{display:flex;align-items:center;gap:.8rem}
-.brand__name{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:#fff;text-shadow:0 .15rem 0 var(--green)}
+.brand{
+  display:grid;
+  justify-items:end;
+  align-self:center;
+  text-decoration:none;
+  gap:.25rem;
+}
+
 .brand__logo{
-  width:3.5rem;
-  height:3.5rem;
+  width:11rem;
+  height:5rem;
   object-fit:contain;
+  object-position:right center;
   filter:drop-shadow(0 0 .5rem rgba(255,255,255,.35));
 }
-.brand__slogan{font-size:.95rem;font-weight:600;color:var(--yellow);font-style:italic}
+
+.brand__slogan{
+  font-size:.95rem;
+  font-weight:600;
+  color:var(--yellow);
+  font-style:italic;
+  text-align:right;
+}
 
 /* ---------- Bandes image + texte ---------- */
 .band{position:relative;display:flex;height:24rem;background:var(--c);background:linear-gradient(135deg,var(--c) 55%,color-mix(in srgb,var(--c) 78%,#000));overflow:hidden}
