@@ -225,6 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     messageField.value = buildMessage();
     updateEmailLink();
+    resultSection.hidden = false;
 
     resultSection.hidden = false;
     formStatus.textContent =
