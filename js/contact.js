@@ -206,16 +206,18 @@ document.addEventListener('DOMContentLoaded', function () {
   // Prépare le lien vers l'application de messagerie.
   // Ce lien ouvre un brouillon : il n'envoie pas l'e-mail.
   function updateEmailLink() {
-    if (!openEmailLink || !messageField) return;
+     if (!openEmailLink || !messageField) return;
 
-    const subject = 'Demande d’accompagnement Reval’0’Resto';
-    const body = messageField.value;
+        const restaurant = getValue('restaurant');
+        const subject = 'Demande d’accompagnement - ' + restaurant;
+        const body = messageField.value;
 
-    openEmailLink.href =
-      'mailto:' + emailRecipient +
-      '?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(body);
+  openEmailLink.href =
+    'mailto:' + emailRecipient +
+    '?subject=' + encodeURIComponent(subject) +
+    '&body=' + encodeURIComponent(body);
   }
+
 
   // Génération du message.
   generateButton.addEventListener('click', function () {
