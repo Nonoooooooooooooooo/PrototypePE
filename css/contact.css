@@ -2,6 +2,71 @@
    CONTACT — REVAL'0'RESTO
    ========================================= */
 
+.site-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:.3rem 1.5rem 0;background:radial-gradient(ellipse at 15% 0,#3f9468 0,transparent 65%),linear-gradient(180deg,#1f6b4c,#124230) #1a5c42;border-bottom:8px solid var(--green);border-image:linear-gradient(90deg,var(--green) 20%,var(--yellow) 20% 40%,var(--blue) 40% 60%,var(--red) 60% 80%,var(--black) 80%) 1;box-shadow:0 .6rem 1.2rem rgba(0,0,0,.25);position:relative;z-index:2}
+.bins{display:flex;gap:.9rem;align-items:flex-start;height:6rem;clip-path:inset(-3rem -2rem 0 -2rem)}
+
+/* ---------- Poubelles du menu (bacs roulants carrés) ---------- */
+.bin{--c:var(--green);display:block;width:7.8rem;text-decoration:none;color:#fff;position:relative;transform-origin:50% 100%;filter:drop-shadow(0 .35rem .3rem rgba(0,0,0,.45))}
+.bin--green{--c:var(--green)} .bin--yellow{--c:var(--yellow);color:var(--ink)} .bin--blue{--c:var(--blue)} .bin--red{--c:var(--red)} .bin--black{--c:#3a4347}
+.bin__lid{display:block;position:relative;height:1.2rem;width:108%;margin-left:-4%;background:linear-gradient(180deg,rgba(255,255,255,.3),transparent 60%),var(--c);border-radius:.5rem .5rem .2rem .2rem;box-shadow:inset 0 -.25rem 0 rgba(0,0,0,.22);transition:transform .3s ease;transform-origin:left bottom}
+.bin__lid::after{content:"";position:absolute;left:50%;bottom:.3rem;width:45%;height:.3rem;margin-left:-22.5%;background:rgba(0,0,0,.3);border-radius:.2rem}
+.bin__body{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:.25rem;min-height:7rem;padding:.45rem .4rem 1rem;background:linear-gradient(90deg,rgba(0,0,0,.22),transparent 14%,transparent 80%,rgba(0,0,0,.2)),linear-gradient(180deg,rgba(0,0,0,.18),transparent .6rem),var(--c);border-radius:0 0 .5rem .5rem;clip-path:polygon(0 0,100% 0,96% 100%,4% 100%)}
+.bin__icon{width:1.9rem;height:1.9rem;color:#fff;filter:drop-shadow(0 1px 1px rgba(0,0,0,.4));fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bin__label{display:block;background:rgba(255,255,255,.93);color:var(--ink);font-weight:600;font-size:.8rem;line-height:1.15;padding:.2rem .45rem;border-radius:.3rem;text-align:center}
+
+/* Une animation propre à chaque poubelle */
+.bin--green:hover .bin__lid,.bin--green:focus-visible .bin__lid{transform:rotate(-38deg)}
+.bin--yellow:hover,.bin--yellow:focus-visible{animation:shake .5s ease}
+.bin--blue:hover .bin__lid,.bin--blue:focus-visible .bin__lid{transform:translateX(35%)}
+.bin--red:hover,.bin--red:focus-visible{animation:jump .6s ease}
+.bin--black{transition:transform .3s ease}
+.bin--black:hover,.bin--black:focus-visible{transform:rotate(-5deg)}
+.bin--black:hover .bin__lid,.bin--black:focus-visible .bin__lid{transform:rotate(28deg);transform-origin:right bottom}
+@keyframes shake{0%,100%{transform:rotate(0)}20%{transform:rotate(-6deg)}40%{transform:rotate(6deg)}60%{transform:rotate(-4deg)}80%{transform:rotate(3deg)}}
+@keyframes jump{0%,100%{transform:translateY(0)}35%{transform:translateY(-.9rem)}60%{transform:translateY(0)}78%{transform:translateY(-.3rem)}}
+
+/* ---------- Marque ---------- */
+
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  align-self:center;
+  text-decoration:none;
+  gap:.1rem;
+}
+
+.brand__logo{
+  width:19rem;
+  height:8rem;
+  object-fit:contain;
+  object-position:center bottom;
+  filter:drop-shadow(0 0 .5rem rgba(255,255,255,.25));
+  margin-bottom:-.3rem;
+}
+
+.brand__slogan{
+  font-size:1rem;
+  font-weight:600;
+  color:var(--yellow);
+  font-style:italic;
+  text-align:center;
+  line-height:1.2;
+}
+
+@media (max-width: 48rem){
+  .brand__logo{
+    width:14rem;
+    height:6rem;
+  }
+
+  .brand__slogan{
+    font-size:.85rem;
+  }
+}
+
 .contact-page {
   padding-bottom: 4rem;
   color: var(--ink);
