@@ -152,16 +152,18 @@ a{color:inherit}
 
 
 /* Réseaux sociaux du footer */
+
+/* Réseaux sociaux du footer */
 .footer-social{
   display:flex;
   justify-content:center;
   align-items:center;
   flex-wrap:wrap;
-  gap:1.5rem 2rem;
-  padding:1.5rem 0;
-  margin:1rem 0;
+  gap:1rem 2rem;
+  padding:1rem 0;
+  margin:0;
   border-top:1px solid rgba(255,255,255,.18);
-  border-bottom:1px solid rgba(255,255,255,.18);
+  /* Une seule séparation : pas de border-bottom */
 }
 
 .footer-social a{
@@ -191,9 +193,10 @@ a{color:inherit}
   border-radius:3px;
 }
 
-@media (max-width: 34rem){
+@media (max-width:34rem){
   .footer-social{
-    gap:1rem 1.25rem;
+    gap:.8rem 1.25rem;
+    padding:.8rem 0;
   }
 
   .footer-social a{
@@ -206,7 +209,7 @@ a{color:inherit}
   }
 }
 
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion:reduce){
   .footer-social a{
     transition:none;
   }
