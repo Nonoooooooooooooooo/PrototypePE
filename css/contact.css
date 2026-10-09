@@ -636,3 +636,41 @@
     transform: none;
   }
 }
+
+
+/* Zone des boutons du message généré */
+.message-result__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.message-result__actions .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 230px;
+  min-height: 48px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Bouton Copier */
+#copy-message {
+  margin-inline: auto;
+}
+
+/* Sur petit écran */
+@media (max-width: 480px) {
+  .message-result__actions {
+    width: 100%;
+  }
+
+  .message-result__actions .button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
