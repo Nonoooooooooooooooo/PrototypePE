@@ -214,3 +214,27 @@ a{color:inherit}
     transition:none;
   }
 }
+
+
+/* Couleurs des logos sociaux */
+.social-facebook svg{
+  color:#1877F2;
+}
+
+.social-instagram svg{
+  color:#E4405F;
+}
+
+.social-youtube svg{
+  color:#FF0033;
+}
+
+.social-x svg{
+  color:#ffffff;
+}
+
+/* Les couleurs des logos restent visibles au survol */
+.footer-social a:hover svg{
+  opacity:.85;
+}
+
