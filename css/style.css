@@ -43,8 +43,8 @@ a{color:inherit}
 }
 
 .brand__logo{
-  width:11rem;
-  height:5rem;
+  width:15rem;
+  height:8rem;
   object-fit:contain;
   object-position:right center;
   filter:drop-shadow(0 0 .5rem rgba(255,255,255,.35));
