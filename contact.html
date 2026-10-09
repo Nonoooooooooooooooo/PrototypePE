@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Présentez votre restaurant et vos besoins en matière de tri et de valorisation des déchets avec Reval'0'Resto.">
+  <meta name="theme-color" content="#2f7d4f">
+  <title>Contact et accompagnement | Reval'0'Resto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/contact.css">
+  <script src="js/main.js?v=7" defer></script>
+  <script src="js/contact.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- EN-TÊTE COMMUN -->
+  <header class="site-header">
+    <nav class="bins" aria-label="Navigation principale">
+      <a class="bin bin--green" href="index.html" aria-label="Accueil">
+        <span class="bin__lid"></span>
+        <span class="bin__body"><span class="bin__icon">⌂</span></span>
+        <span class="bin__label">Accueil</span>
+      </a>
+
+      <a class="bin bin--yellow" href="presentation.html" aria-label="Présentation">
+        <span class="bin__lid"></span>
+        <span class="bin__body"><span class="bin__icon">i</span></span>
+        <span class="bin__label">Présentation</span>
+      </a>
+
+      <a class="bin bin--blue" href="trier.html" aria-label="Trier et revaloriser">
+        <span class="bin__lid"></span>
+        <span class="bin__body"><span class="bin__icon">↻</span></span>
+        <span class="bin__label">Trier / Revaloriser</span>
+      </a>
+
+      <a class="bin bin--red" href="offres.html" aria-label="Nos offres">
+        <span class="bin__lid"></span>
+        <span class="bin__body"><span class="bin__icon">★</span></span>
+        <span class="bin__label">Nos offres</span>
+      </a>
+
+      <a class="bin bin--black" href="contact.html" aria-current="page" aria-label="Contact">
+        <span class="bin__lid"></span>
+        <span class="bin__body"><span class="bin__icon">✉</span></span>
+        <span class="bin__label">Contact</span>
+      </a>
+    </nav>
+
+    <a class="brand" href="index.html" aria-label="Reval'0'Resto, accueil">
+      <img class="brand__logo" src="images/logo.png" alt="Reval'0'Resto">
+      <span class="brand__slogan">Moins de déchet, plus de valeur</span>
+    </a>
+  </header>
+
+  <main id="contenu" class="contact-page">
+    <section class="contact-hero">
+      <div class="contact-hero__content">
+        <span class="contact-eyebrow">Un accompagnement adapté à votre restaurant</span>
+        <h1>Et si vos déchets avaient plus de valeur&nbsp;?</h1>
+
+        <p>
+          Chaque restaurant est différent. Répondez à quelques questions pour
+          présenter votre établissement, vos déchets et vos besoins.
+          Nous pourrons ainsi mieux vous orienter vers des solutions de tri
+          et de valorisation adaptées.
+        </p>
+
+        <p class="contact-hero__note">
+          Préparez votre demande en quelques minutes, puis copiez le message
+          généré pour nous l’envoyer par e-mail.
+        </p>
+
+        <a class="button button--primary contact-hero__button" href="#questionnaire">
+          Commencer le questionnaire
+        </a>
+      </div>
+
+      <div class="contact-hero__visual" aria-hidden="true">
+        <div class="contact-hero__leaf">↻</div>
+        <span class="contact-hero__bubble contact-hero__bubble--green">Mieux trier</span>
+        <span class="contact-hero__bubble contact-hero__bubble--yellow">Mieux valoriser</span>
+      </div>
+    </section>
+
+    <section class="contact-intro">
+      <span class="contact-eyebrow">Votre demande, étape par étape</span>
+      <h2>Parlons de votre restaurant</h2>
+      <p>
+        Cochez les réponses qui correspondent à votre situation.
+        À la fin, un message récapitulatif sera créé automatiquement.
+        Vous pourrez le relire, le modifier et le copier avant de l’envoyer.
+      </p>
+    </section>
+
+    <section id="questionnaire" class="quote-section" aria-labelledby="questionnaire-title">
+      <div class="quote-form">
+        <h2 id="questionnaire-title" class="visually-hidden">
+          Questionnaire de demande d’accompagnement
+        </h2>
+
+        <p class="required-note">
+          Les champs marqués d’un astérisque (*) sont obligatoires.
+        </p>
+
+        <!-- ÉTAPE 1 -->
+        <fieldset class="quote-step">
+          <legend>
+            <span class="quote-step__number">1</span>
+            Votre établissement
+          </legend>
+
+          <div class="quote-grid">
+            <div class="form-field">
+              <label for="restaurant">Nom du restaurant *</label>
+              <input id="restaurant" name="restaurant" type="text"
+                     autocomplete="organization" required>
+            </div>
+
+            <div class="form-field">
+              <label for="type-etablissement">Type d’établissement *</label>
+              <select id="type-etablissement" name="type-etablissement" required>
+                <option value="">Choisir une réponse</option>
+                <option>Restaurant traditionnel</option>
+                <option>Restaurant gastronomique</option>
+                <option>Restauration rapide</option>
+                <option>Brasserie / café</option>
+                <option>Traiteur</option>
+                <option>Hôtel avec restauration</option>
+                <option>Cantine / restauration collective</option>
+                <option>Boulangerie / pâtisserie</option>
+                <option>Autre</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="ville">Ville *</label>
+              <input id="ville" name="ville" type="text"
+                     autocomplete="address-level2" required>
+            </div>
+
+            <div class="form-field">
+              <label for="code-postal">Code postal *</label>
+              <input id="code-postal" name="code-postal" type="text"
+                     inputmode="numeric" autocomplete="postal-code"
+                     pattern="[0-9]{5}" maxlength="5" required>
+              <p class="form-hint">Indiquez les 5 chiffres du code postal.</p>
+            </div>
+
+            <div class="form-field">
+              <label for="nombre-sites">Nombre d’établissements</label>
+              <select id="nombre-sites" name="nombre-sites">
+                <option value="">Choisir une réponse</option>
+                <option>1 établissement</option>
+                <option>2 à 5 établissements</option>
+                <option>6 à 10 établissements</option>
+                <option>Plus de 10 établissements</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="couverts">Nombre moyen de couverts par jour</label>
+              <select id="couverts" name="couverts">
+                <option value="">Choisir une réponse</option>
+                <option>Moins de 30</option>
+                <option>30 à 80</option>
+                <option>81 à 150</option>
+                <option>151 à 300</option>
+                <option>Plus de 300</option>
+                <option>Variable / difficile à estimer</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ÉTAPE 2 -->
+        <fieldset class="quote-step">
+          <legend>
+            <span class="quote-step__number">2</span>
+            Quels déchets produisez-vous&nbsp;?
+          </legend>
+
+          <p class="form-hint">Plusieurs réponses possibles. Choisissez au moins une option.</p>
+
+          <div class="choice-grid">
+            <label class="choice-card">
+              <input type="checkbox" name="dechets" value="Biodéchets et restes alimentaires">
+              <span>Biodéchets et restes alimentaires</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="dechets" value="Verre">
+              <span>Verre</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="dechets" value="Cartons et papier">
+              <span>Cartons et papier</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="dechets" value="Emballages et plastique">
+              <span>Emballages et plastique</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="dechets" value="Huiles alimentaires usagées">
+              <span>Huiles alimentaires usagées</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="dechets" value="Déchets résiduels">
+              <span>Déchets résiduels</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="dechets" value="Autres déchets">
+              <span>Autres déchets</span>
+            </label>
+          </div>
+
+          <p id="waste-error" class="form-error" role="alert" hidden>
+            Sélectionnez au moins un type de déchet.
+          </p>
+        </fieldset>
+
+        <!-- ÉTAPE 3 -->
+        <fieldset class="quote-step">
+          <legend>
+            <span class="quote-step__number">3</span>
+            Comment le tri est-il organisé aujourd’hui&nbsp;?
+          </legend>
+
+          <p class="form-label">Organisation actuelle du tri *</p>
+          <div class="choice-list">
+            <label class="choice-card">
+              <input type="radio" name="organisation-tri" value="Le tri est déjà organisé" required>
+              <span>Le tri est déjà organisé</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="organisation-tri" value="Le tri est partiellement organisé">
+              <span>Le tri est partiellement organisé</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="organisation-tri" value="Le tri reste à mettre en place">
+              <span>Le tri reste à mettre en place</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="organisation-tri" value="Je ne sais pas encore">
+              <span>Je ne sais pas encore</span>
+            </label>
+          </div>
+
+          <p class="form-label choice-question">Travaillez-vous déjà avec des partenaires pour la gestion de vos déchets&nbsp;? *</p>
+          <div class="choice-list">
+            <label class="choice-card">
+              <input type="radio" name="partenaires" value="Oui, plusieurs partenaires" required>
+              <span>Oui, plusieurs partenaires</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="partenaires" value="Oui, un seul partenaire">
+              <span>Oui, un seul partenaire</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="partenaires" value="Non, pas pour le moment">
+              <span>Non, pas pour le moment</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="partenaires" value="Je ne sais pas exactement">
+              <span>Je ne sais pas exactement</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- ÉTAPE 4 -->
+        <fieldset class="quote-step">
+          <legend>
+            <span class="quote-step__number">4</span>
+            Sur quels sujets souhaitez-vous être accompagné&nbsp;?
+          </legend>
+
+          <p class="form-hint">Plusieurs réponses possibles. Choisissez au moins une option.</p>
+
+          <div class="choice-grid">
+            <label class="choice-card">
+              <input type="checkbox" name="besoins" value="Faire un diagnostic du tri">
+              <span>Faire un diagnostic du tri</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="besoins" value="Identifier des solutions de valorisation">
+              <span>Identifier des solutions de valorisation</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="besoins" value="Être mis en relation avec des partenaires spécialisés">
+              <span>Être mis en relation avec des partenaires spécialisés</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="besoins" value="Améliorer le tri au quotidien">
+              <span>Améliorer le tri au quotidien</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="besoins" value="Mieux comprendre les obligations applicables">
+              <span>Mieux comprendre les obligations applicables</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="besoins" value="Maîtriser les coûts liés aux déchets">
+              <span>Maîtriser les coûts liés aux déchets</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="besoins" value="Réduire le gaspillage alimentaire">
+              <span>Réduire le gaspillage alimentaire</span>
+            </label>
+
+            <label class="choice-card">
+              <input type="checkbox" name="besoins" value="Bénéficier d'un accompagnement global">
+              <span>Bénéficier d’un accompagnement global</span>
+            </label>
+          </div>
+
+          <p id="needs-error" class="form-error" role="alert" hidden>
+            Sélectionnez au moins un besoin d’accompagnement.
+          </p>
+        </fieldset>
+
+        <!-- ÉTAPE 5 -->
+        <fieldset class="quote-step">
+          <legend>
+            <span class="quote-step__number">5</span>
+            Comment vous recontacter&nbsp;?
+          </legend>
+
+          <div class="quote-grid">
+            <div class="form-field">
+              <label for="nom-contact">Votre nom et prénom *</label>
+              <input id="nom-contact" name="nom-contact" type="text"
+                     autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="fonction">Votre fonction</label>
+              <input id="fonction" name="fonction" type="text"
+                     placeholder="Ex. : gérant, responsable…">
+            </div>
+
+            <div class="form-field">
+              <label for="email-contact">Votre adresse e-mail *</label>
+              <input id="email-contact" name="email-contact" type="email"
+                     autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="telephone">Votre téléphone (facultatif)</label>
+              <input id="telephone" name="telephone" type="tel"
+                     autocomplete="tel">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ÉTAPE 6 -->
+        <fieldset class="quote-step">
+          <legend>
+            <span class="quote-step__number">6</span>
+            Un détail à ajouter&nbsp;?
+          </legend>
+
+          <div class="form-field">
+            <label for="remarques">Précisions ou questions complémentaires</label>
+            <textarea id="remarques" name="remarques" rows="5"
+              placeholder="Vous pouvez préciser votre situation, vos contraintes, vos objectifs ou vos questions…"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="quote-submit">
+          <p>
+            Vos réponses servent uniquement à préparer le texte dans cette page.
+            Rien n’est envoyé automatiquement lorsque vous cliquez sur le bouton.
+          </p>
+
+          <button class="button button--primary" id="generate-message" type="button">
+            Générer mon message
+          </button>
+
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- MESSAGE GÉNÉRÉ -->
+        <section id="resultat-message" class="message-result" aria-labelledby="message-title" hidden>
+          <span class="contact-eyebrow">Votre message est prêt</span>
+          <h2 id="message-title">Relisez, copiez, puis envoyez</h2>
+          <p>
+            Vous pouvez modifier le texte ci-dessous avant de le copier.
+            Ensuite, envoyez-le à
+            <a href="mailto:devisrevaloresto@gmail.com">devisrevaloresto@gmail.com</a>.
+          </p>
+
+          <label for="message-genere" class="form-label">Message à envoyer</label>
+          <textarea id="message-genere" rows="18" spellcheck="true"></textarea>
+
+          <div class="message-result__actions">
+            <button class="button button--primary" id="copy-message" type="button">
+              Copier le message
+            </button>
+            <a class="button button--secondary" id="open-email"
+               href="mailto:devisrevaloresto@gmail.com">
+              Ouvrir ma messagerie
+            </a>
+          </div>
+
+          <p id="copy-status" class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-hint">
+            Le bouton « Ouvrir ma messagerie » prépare un e-mail dans votre application
+            de messagerie, si votre appareil en a une configurée. Il ne l’envoie pas
+            à votre place.
+          </p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIED DE PAGE COMMUN -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="footer-brand__link" href="index.html">Reval'0'Resto</a>
+        <p>Moins de déchet, plus de valeur.</p>
+        <p>Un intermédiaire pour mieux trier, valoriser et trouver les bons partenaires.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navigation de pied de page">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="trier.html">Trier / Revaloriser</a>
+        <a href="offres.html">Nos offres</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="footer-social">
+        <p class="footer-social__title">Suivez-nous</p>
+        <div class="footer-social__links">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <span aria-hidden="true">f</span>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <span aria-hidden="true">◎</span>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <span aria-hidden="true">▶</span>
+          </a>
+          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <span aria-hidden="true">𝕏</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="annee"></span> Reval'0'Resto</p>
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
