@@ -682,3 +682,10 @@
 
 @media(max-width:34rem){.bins{flex-wrap:wrap;justify-content:center;height:auto;clip-path:none;padding-bottom:.9rem}}
 @media(prefers-reduced-motion:reduce){.bin,.bin__lid{animation:none!important;transition:none!important}}
+
+@media(max-width:48rem){
+  .band,.band--reverse{flex-direction:column;height:auto}
+  .band__img,.band--reverse .band__img{flex:none;clip-path:none;height:14rem}
+  .stripes,.band--reverse .stripes{position:static;width:100%;height:.8rem;transform:none;box-shadow:none}
+  .band__text,.band--reverse .band__text{flex:none;padding:2rem 1.5rem}
+}
