@@ -544,3 +544,9 @@
   content: none !important;
 }
 
+/* Masquer la décoration du haut sur mobile */
+@media (max-width: 600px) {
+  .presentation-intro__sticker {
+    display: none;
+  }
+}
