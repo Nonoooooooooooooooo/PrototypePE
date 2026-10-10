@@ -4,77 +4,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Présentation | Reval'0'Resto</title>
   <meta name="description" content="Découvrez Reval'0'Resto, le tri des déchets, les filières de valorisation, nos outils et nos solutions pour les restaurateurs.">
 
-  <!-- Feuille de style commune à tout le site -->
   <link rel="stylesheet" href="css/style.css?v=7">
-
-  <!-- Feuille de style spécifique à la page Présentation -->
-  <link rel="stylesheet" href="css/presentation.css?v=1">
+  <link rel="stylesheet" href="css/presentation.css?v=2">
 </head>
 
 <body>
 
+  <!-- EN-TÊTE COMMUN DU SITE -->
   <header class="site-header">
-  <nav class="bins" aria-label="Navigation principale">
-    <a class="bin bin--green" href="index.html">
-      <span class="bin__lid"></span>
-      <span class="bin__body">
-        <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v4l2 3v12a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3z"/><path d="M8 13h8"/></svg>
-        <span class="bin__label">Accueil</span>
-      </span>
-    </a>
-    <a class="bin bin--yellow" href="presentation.html">
-      <span class="bin__lid"></span>
-      <span class="bin__body">
-        <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
-        <span class="bin__label">Présentation</span>
-      </span>
-    </a>
-    <a class="bin bin--blue" href="trier.html">
-      <span class="bin__lid"></span>
-      <span class="bin__body">
-        <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
-        <span class="bin__label">Trier / Revaloriser</span>
-      </span>
-    </a>
-    <a class="bin bin--red" href="offres.html">
-      <span class="bin__lid"></span>
-      <span class="bin__body">
-        <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"/><path d="M7 4c0-1 2-2 5-2s5 1 5 2M7 9h10M7 15h10"/></svg>
-        <span class="bin__label">Nos offres</span>
-      </span>
-    </a>
-    <a class="bin bin--black" href="contact.html">
-      <span class="bin__lid"></span>
-      <span class="bin__body">
-        <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7c-2-2-7-1-7 5 0 5 3 9 5 9 1 0 1.5-.5 2-.5s1 .5 2 .5c2 0 5-4 5-9 0-6-5-7-7-5z"/><path d="M12 7c0-2 1-4 3-4"/></svg>
-        <span class="bin__label">Contact</span>
-      </span>
-    </a>
-  </nav>
+    <nav class="bins" aria-label="Navigation principale">
+      <a class="bin bin--green" href="index.html">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10 2h4v4l2 3v12a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3z"/>
+            <path d="M8 13h8"/>
+          </svg>
+          <span class="bin__label">Accueil</span>
+        </span>
+      </a>
 
-  <a class="brand" href="index.html" aria-label="Reval'0'Resto, retour à l'accueil">
-  <img
-    class="brand__logo"
-    src="images/logo.png"
-    alt="Reval'0'Resto"
-  >
+      <a class="bin bin--yellow" href="presentation.html" aria-current="page">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 7l9-4 9 4v10l-9 4-9-4z"/>
+            <path d="M3 7l9 4 9-4M12 11v10"/>
+          </svg>
+          <span class="bin__label">Présentation</span>
+        </span>
+      </a>
 
-  <span class="brand__slogan">Moins de déchet, plus de valeur</span>
-</a>
-</header>
+      <a class="bin bin--blue" href="trier.html">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4" y="3" width="16" height="18" rx="2"/>
+            <path d="M8 8h8M8 12h8M8 16h5"/>
+          </svg>
+          <span class="bin__label">Trier / Revaloriser</span>
+        </span>
+      </a>
 
+      <a class="bin bin--red" href="offres.html">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 4h10v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"/>
+            <path d="M7 4c0-1 2-2 5-2s5 1 5 2M7 9h10M7 15h10"/>
+          </svg>
+          <span class="bin__label">Nos offres</span>
+        </span>
+      </a>
 
-  <!-- ==================================================
-       CONTENU PRINCIPAL DE LA PAGE PRÉSENTATION
-       ================================================== -->
+      <a class="bin bin--black" href="contact.html">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 7c-2-2-7-1-7 5 0 5 3 9 5 9 1 0 1.5-.5 2-.5s1 .5 2 .5c2 0 5-4 5-9 0-6-5-7-7-5z"/>
+            <path d="M12 7c0-2 1-4 3-4"/>
+          </svg>
+          <span class="bin__label">Contact</span>
+        </span>
+      </a>
+    </nav>
 
+    <a class="brand" href="index.html" aria-label="Reval'0'Resto, retour à l'accueil">
+      <img class="brand__logo" src="images/logo.png" alt="Reval'0'Resto">
+      <span class="brand__slogan">Moins de déchet, plus de valeur</span>
+    </a>
+  </header>
+
+  <!-- CONTENU DE LA PAGE PRÉSENTATION -->
   <main class="presentation-page">
 
-    <!-- INTRODUCTION -->
     <section class="presentation-intro reveal">
       <div class="presentation-intro__text">
         <span class="comic-tag">DÉCOUVREZ NOTRE UNIVERS</span>
@@ -96,95 +102,87 @@
         </a>
       </div>
 
+      <!-- Pièce jaune conservée, avec une feuille à la place de la coche -->
       <div class="presentation-intro__sticker" aria-hidden="true">
         <span>MOINS</span>
         <strong>DE</strong>
         <span>DÉCHETS !</span>
 
-        <svg viewBox="0 0 120 120" role="presentation">
-          <path d="M60 12 72 42 104 30 87 58 112 76 79 78 74 108 55 84 28 101 38 72 9 59 40 51Z"
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <path
+            d="M60 12 72 42 104 30 87 58 112 76 79 78 74 108 55 84 28 101 38 72 9 59 40 51Z"
             fill="none"
             stroke="currentColor"
             stroke-width="4"
-            stroke-linejoin="round"/>
-          <path d="m44 61 12 12 23-28"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M39 76C38 53 55 36 82 35C82 61 64 78 39 76Z"
             fill="none"
             stroke="currentColor"
-            stroke-width="6"
+            stroke-width="4"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M39 76C50 64 62 53 76 43"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
             stroke-linecap="round"
-            stroke-linejoin="round"/>
+          />
         </svg>
       </div>
     </section>
 
-
-    <!-- MOSAÏQUE DES SEPT VIGNETTES -->
+    <!-- VIGNETTE 1 : ÉCOLOGIE -->
     <section class="comic-board" aria-label="Découvrez nos activités">
 
-      <!-- 01 : ÉCOLOGIE AVEC VIDÉO -->
       <article class="comic-card comic-card--eco reveal">
         <span class="comic-card__number">01 / ÉCOLOGIE</span>
-
         <h2>Trier aujourd'hui, préserver demain</h2>
-
         <p>
           Le tri permet de mieux orienter les déchets, de limiter le
           gaspillage des ressources et de favoriser leur valorisation.
           Chaque geste compte, en salle comme en cuisine.
         </p>
-
         <div class="comic-card__media">
           <video controls preload="metadata" playsinline
             aria-label="Vidéo sur l'intérêt écologique du tri">
             <source src="videos/ecologie.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge cette vidéo.
           </video>
-          <span class="media-caption">UN PETIT GESTE, UN GRAND IMPACT</span>
         </div>
-
-        <span class="comic-card__decoration" aria-hidden="true">BAM !</span>
       </article>
 
-
-      <!-- 02 : LÉGISLATION AVEC PHOTO -->
+      <!-- VIGNETTE 2 : LÉGISLATION -->
       <article class="comic-card comic-card--law reveal">
         <span class="comic-card__number">02 / LÉGISLATION</span>
-
         <h2>Le tri, ce n'est pas une option</h2>
-
         <div class="comic-card__media">
           <img
             src="images/presentation/legislation.jpg"
             alt="Bacs de tri dans un établissement de restauration"
             loading="lazy">
         </div>
-
         <p>
           Les professionnels doivent respecter les obligations de tri
           et de gestion des déchets applicables à leur activité.
           Nous vous aidons à mieux comprendre les règles et à identifier
           les solutions adaptées à votre situation.
         </p>
-
-        <a class="comic-card__link" href="contact.html">
-          Faisons le point ↗
-        </a>
+        <a class="comic-card__link" href="contact.html">Faisons le point ↗</a>
       </article>
 
-
-      <!-- 03 : REVALORISATION AVEC VIDÉO -->
+      <!-- VIGNETTE 3 : REVALORISATION -->
       <article class="comic-card comic-card--value reveal">
         <span class="comic-card__number">03 / REVALORISATION</span>
-
         <h2>Un déchet n'est pas toujours une fin</h2>
-
         <p>
           Biodéchets, cartons, verre ou huiles alimentaires usagées :
           selon leur nature, différents circuits de valorisation peuvent
           être envisagés. Notre rôle est de vous aider à identifier les
           filières et les partenaires pertinents.
         </p>
-
         <div class="comic-card__media">
           <video controls preload="metadata" playsinline
             aria-label="Vidéo sur les filières de valorisation">
@@ -192,50 +190,37 @@
             Votre navigateur ne prend pas en charge cette vidéo.
           </video>
         </div>
-
-        <span class="comic-card__bubble">
-          ON LEUR DONNE UNE SECONDE VIE !
-        </span>
       </article>
 
-
-      <!-- 04 : BACS PERSONNALISÉS AVEC PHOTO -->
+      <!-- VIGNETTE 4 : ÉQUIPEMENT -->
       <article class="comic-card comic-card--bins reveal">
         <span class="comic-card__number">04 / ÉQUIPEMENT</span>
-
         <h2>Des bacs de tri à votre image</h2>
-
         <div class="comic-card__media">
           <img
             src="images/presentation/bacs-personnalises.jpg"
             alt="Exemple de bacs de tri pour un restaurant"
             loading="lazy">
         </div>
-
         <p>
           Des bacs personnalisés, des couleurs distinctes et des
           consignes lisibles : un équipement adapté peut faciliter
           le tri pour les équipes et améliorer leurs habitudes.
         </p>
-
         <a class="comic-card__link" href="contact.html">
           Découvrir les possibilités ↗
         </a>
       </article>
 
-
-      <!-- 05 : APPLICATION AVEC VIDÉO -->
+      <!-- VIGNETTE 5 : APPLICATION -->
       <article class="comic-card comic-card--app reveal">
         <span class="comic-card__number">05 / APPLICATION</span>
-
         <h2>Le tri, plus simple au quotidien</h2>
-
         <p>
           Découvrez notre application et la façon dont les outils
           numériques peuvent aider les équipes à retrouver les consignes
           de tri et à mieux organiser leurs pratiques.
         </p>
-
         <div class="comic-card__media">
           <video controls preload="metadata" playsinline
             aria-label="Présentation vidéo de l'application">
@@ -243,48 +228,35 @@
             Votre navigateur ne prend pas en charge cette vidéo.
           </video>
         </div>
-
-        <span class="comic-card__decoration" aria-hidden="true">TIC TAC !</span>
       </article>
 
-
-      <!-- 06 : SITE INTERNET AVEC PHOTO -->
+      <!-- VIGNETTE 6 : SITE INTERNET -->
       <article class="comic-card comic-card--website reveal">
         <span class="comic-card__number">06 / LE SITE</span>
-
         <h2>Toutes les infos à portée de clic</h2>
-
         <div class="comic-card__media">
           <img
             src="images/presentation/site-internet.jpg"
             alt="Illustration du site internet Reval'0'Resto"
             loading="lazy">
         </div>
-
         <p>
           Retrouvez nos informations, explorez nos services et découvrez
           les possibilités qui s'offrent à votre établissement.
         </p>
-
-        <a class="comic-card__link" href="index.html">
-          Retour à l'accueil ↗
-        </a>
+        <a class="comic-card__link" href="index.html">Retour à l'accueil ↗</a>
       </article>
 
-
-      <!-- 07 : OFFRES AVEC VIDÉO -->
+      <!-- VIGNETTE 7 : OFFRES -->
       <article class="comic-card comic-card--offers reveal">
         <div class="comic-card__content">
           <span class="comic-card__number">07 / NOS OFFRES</span>
-
           <h2>Des solutions adaptées à votre restaurant</h2>
-
           <p>
             Vous souhaitez faire le point sur vos pratiques, mieux
             organiser votre tri ou identifier des partenaires de
             valorisation ? Découvrez nos offres d'accompagnement.
           </p>
-
           <a class="presentation-button presentation-button--dark"
             href="offres.html">
             Explorer les offres
@@ -299,24 +271,22 @@
             Votre navigateur ne prend pas en charge cette vidéo.
           </video>
         </div>
-
-        <span class="comic-card__bubble">
-          À CHACUN SA SOLUTION !
-        </span>
       </article>
 
     </section>
 
-
     <!-- CONCLUSION -->
     <section class="presentation-outro reveal">
-      <div class="presentation-outro__symbol" aria-hidden="true">✓</div>
+      <div class="presentation-outro__symbol" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+          <path d="M51 12C29 12 15 22 14 39c0 7 5 12 12 12 18-1 27-19 25-39Z"/>
+          <path d="M12 54c8-13 19-23 32-32"/>
+        </svg>
+      </div>
 
       <div class="presentation-outro__text">
         <span class="comic-tag">ON PASSE À L'ACTION ?</span>
-
         <h2>Votre restaurant aussi peut faire la différence.</h2>
-
         <p>
           Parlons de vos besoins et identifions ensemble les pistes
           d'amélioration adaptées à votre établissement.
@@ -330,118 +300,94 @@
 
   </main>
 
+  <!-- PIED DE PAGE COMMUN -->
+  <footer class="site-footer">
+    <div class="footer__cols">
+      <div>
+        <h3>Reval'0'Resto</h3>
+        <ul>
+          <li><a href="presentation.html">Qui sommes-nous</a></li>
+          <li><a href="offres.html">Nos offres</a></li>
+          <li><a href="trier.html">Guide du tri</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+      </div>
 
-<footer class="site-footer">
-  <div class="footer__cols">
-    <div>
-      <h3>Reval'0'Resto</h3>
-      <ul>
-        <li><a href="presentation.html">Qui sommes-nous</a></li>
-        <li><a href="offres.html">Nos offres</a></li>
-        <li><a href="trier.html">Guide du tri</a></li>
-        <li><a href="contact.html">Nous contacter</a></li>
-      </ul>
+      <div>
+        <h3>Informations</h3>
+        <ul>
+          <li><a href="faq.html">Questions fréquentes</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="zone.html">Zone d'intervention</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Informations légales</h3>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+          <li><a href="cgv.html">Conditions générales de vente</a></li>
+          <li><a href="cookies.html">Gestion des cookies</a></li>
+          <li><a href="plan-du-site.html">Plan du site</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h3>Informations</h3>
-      <ul>
-        <li><a href="faq.html">Questions fréquentes</a></li>
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="zone.html">Zone d'intervention</a></li>
-      </ul>
+
+    <div class="footer-social">
+      <a class="social-facebook" href="https://www.facebook.com/"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Retrouvez-nous sur Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8z"/>
+        </svg>
+        <span>Facebook</span>
+      </a>
+
+      <a class="social-instagram" href="https://www.instagram.com/"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Retrouvez-nous sur Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"
+            fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="12" cy="12" r="4"
+            fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="17.5" cy="6.8" r="1.3" fill="currentColor"/>
+        </svg>
+        <span>Instagram</span>
+      </a>
+
+      <a class="social-youtube" href="https://www.youtube.com/"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Retrouvez-nous sur YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M23 7a3 3 0 0 0-2.1-2.1C19 4.4 12 4.4 12 4.4s-7 0-8.9.5A3 3 0 0 0 1 7a31 31 0 0 0-.5 5 31 31 0 0 0 .5 5 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 17a31 31 0 0 0 .5-5 31 31 0 0 0-.5-5ZM9.7 15.5v-7l6 3.5z"/>
+        </svg>
+        <span>YouTube</span>
+      </a>
+
+      <a class="social-x" href="https://x.com/"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Retrouvez-nous sur X">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.4l7.3-8.4L1.9 2h6.4l4.5 6.8zM17.8 20h1.7L7.4 3.9H5.6z"/>
+        </svg>
+        <span>X</span>
+      </a>
     </div>
-    <div>
-      <h3>Informations légales</h3>
-      <ul>
-        <li><a href="mentions-legales.html">Mentions légales</a></li>
-        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
-        <li><a href="cgv.html">Conditions générales de vente</a></li>
-        <li><a href="cookies.html">Gestion des cookies</a></li>
-        <li><a href="plan-du-site.html">Plan du site</a></li>
-      </ul>
+
+    <div class="footer__legal">
+      <p>
+        <strong>Reval'0'Resto</strong> – 51 chemin des Mouilles 69130 Écully –
+        Tél. ** ** ** ** 72 –
+        <a href="mailto:contactrevaloresto@gmail.fr">contactrevaloresto@gmail.fr</a> –
+        Disponible du lundi au vendredi, 8h-19h
+      </p>
+      <p>© <span id="annee">2026</span> Reval'0'Resto. Tous droits réservés.</p>
     </div>
-  </div>
+  </footer>
 
-<!-- Réseaux sociaux -->
-<div class="footer-social">
-
-  <!-- Facebook -->
-  <a class="social-facebook"
-     href="https://www.facebook.com/"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Retrouvez-nous sur Facebook">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="#1877F2" d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8z"/>
-    </svg>
-    <span>Facebook</span>
-  </a>
-
-  <!-- Instagram -->
-  <a class="social-instagram"
-     href="https://www.instagram.com/"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Retrouvez-nous sur Instagram">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <defs>
-        <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#FFDC80"/>
-          <stop offset="35%" stop-color="#F77737"/>
-          <stop offset="65%" stop-color="#E1306C"/>
-          <stop offset="100%" stop-color="#833AB4"/>
-        </linearGradient>
-      </defs>
-      <rect x="3" y="3" width="18" height="18" rx="5"
-            fill="none" stroke="url(#instagram-gradient)" stroke-width="2.2"/>
-      <circle cx="12" cy="12" r="4"
-              fill="none" stroke="url(#instagram-gradient)" stroke-width="2.2"/>
-      <circle cx="17.5" cy="6.8" r="1.3" fill="#E1306C"/>
-    </svg>
-    <span>Instagram</span>
-  </a>
-
-  <!-- YouTube -->
-  <a class="social-youtube"
-     href="https://www.youtube.com/"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Retrouvez-nous sur YouTube">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="#FF0033"
-            d="M23 7a3 3 0 0 0-2.1-2.1C19 4.4 12 4.4 12 4.4s-7 0-8.9.5A3 3 0 0 0 1 7a31 31 0 0 0-.5 5 31 31 0 0 0 .5 5 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 17a31 31 0 0 0 .5-5 31 31 0 0 0-.5-5ZM9.7 15.5v-7l6 3.5z"/>
-    </svg>
-    <span>YouTube</span>
-  </a>
-
-  <!-- X -->
-  <a class="social-x"
-     href="https://x.com/"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Retrouvez-nous sur X">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="#ffffff"
-            d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.4l7.3-8.4L1.9 2h6.4l4.5 6.8zM17.8 20h1.7L7.4 3.9H5.6z"/>
-    </svg>
-    <span>X</span>
-  </a>
-
-</div>
-
-
-  <div class="footer__legal">
-    <p><strong>Reval'0'Resto</strong> – 51 chemin des Mouilles 69130 Ecully – Tél. ** ** ** ** 72 – <a href="mailto:contactrevaloresto@gmail.fr">contactrevaloresto@gmail.fr</a> – Disponible du lundi au vendredi, 8h-19h </p>
-    <p>© <span id="annee">2026</span> Reval'0'Resto. Tous droits réservés.</p>
-  </div>
-</footer>
-
-
-  <!-- JavaScript commun : menu, année et animations générales -->
   <script src="js/main.js?v=7" defer></script>
-
-  <!-- JavaScript spécifique à la page Présentation -->
   <script src="js/presentation.js?v=1" defer></script>
-
 </body>
 </html>
