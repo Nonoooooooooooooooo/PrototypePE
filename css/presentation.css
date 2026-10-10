@@ -1,0 +1,469 @@
+
+/* =========================================
+   PRÉSENTATION — MOSAÏQUE STYLE BD
+   ========================================= */
+
+.presentation-page {
+  --comic-outline: #22282b;
+  --comic-shadow: 5px 5px 0 var(--comic-outline);
+
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  overflow: hidden;
+}
+
+/* INTRODUCTION */
+
+.presentation-intro {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  align-items: center;
+  gap: 2rem;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  margin-bottom: 2rem;
+  border: 3px solid var(--comic-outline);
+  border-radius: 1.2rem;
+  background: #fffdf2;
+  box-shadow: 7px 7px 0 var(--green);
+  overflow: hidden;
+}
+
+.comic-tag {
+  display: inline-block;
+  padding: .35rem .7rem;
+  border: 2px solid var(--comic-outline);
+  border-radius: .25rem;
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: .75rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  transform: rotate(-1.5deg);
+}
+
+.presentation-intro h1 {
+  max-width: 15ch;
+  margin: 1.2rem 0;
+  font-size: clamp(2.3rem, 5.5vw, 5rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.presentation-intro h1 span {
+  color: var(--green);
+}
+
+.presentation-intro__text > p {
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: 1.12rem;
+}
+
+.presentation-intro__sticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  padding: 1rem;
+  border: 4px solid var(--comic-outline);
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--comic-outline);
+  text-align: center;
+  transform: rotate(7deg);
+  box-shadow: 4px 4px 0 var(--comic-outline);
+}
+
+.presentation-intro__sticker span {
+  font-size: 1.15rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.presentation-intro__sticker strong {
+  font-size: 2.3rem;
+  line-height: 1.1;
+}
+
+.presentation-intro__sticker svg {
+  width: 55%;
+  margin-top: .3rem;
+}
+
+/* BOUTONS */
+
+.presentation-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  min-height: 3rem;
+  padding: .8rem 1.15rem;
+  border: 2px solid var(--comic-outline);
+  border-radius: .4rem;
+  background: var(--green);
+  box-shadow: 3px 3px 0 var(--comic-outline);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.presentation-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--comic-outline);
+}
+
+.presentation-button--dark {
+  background: var(--ink);
+}
+
+/* MOSAÏQUE */
+
+.comic-board {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.6rem);
+  align-items: stretch;
+}
+
+.comic-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(1rem, 2.5vw, 1.8rem);
+  border: 3px solid var(--comic-outline);
+  border-radius: .8rem;
+  box-shadow: var(--comic-shadow);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.comic-card:hover {
+  transform: translateY(-4px) rotate(-.3deg);
+  box-shadow: 7px 9px 0 var(--comic-outline);
+}
+
+.comic-card__number {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: .8rem;
+  padding: .25rem .5rem;
+  border: 2px solid currentColor;
+  border-radius: .2rem;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .07em;
+}
+
+.comic-card h2 {
+  margin: 0 0 .9rem;
+  font-size: clamp(1.5rem, 2.6vw, 2.5rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -.025em;
+}
+
+.comic-card p {
+  margin: 0 0 1rem;
+  line-height: 1.65;
+}
+
+.comic-card__content {
+  position: relative;
+  z-index: 1;
+}
+
+.comic-card__media {
+  position: relative;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.comic-card__media img,
+.comic-card__media video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 2px solid var(--comic-outline);
+  border-radius: .45rem;
+  background: #17211d;
+}
+
+.comic-card__media img {
+  transition: transform .35s ease;
+}
+
+.comic-card:hover .comic-card__media img {
+  transform: scale(1.025);
+}
+
+.media-caption {
+  display: block;
+  margin-top: .55rem;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.comic-card__link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: .6rem;
+  font-weight: 900;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.comic-card__link:hover {
+  color: var(--ink);
+}
+
+/* FORMATS ET COULEURS DES VIGNETTES */
+
+.comic-card--eco {
+  grid-column: span 7;
+  background: var(--green);
+  color: #fff;
+  transform: rotate(-.5deg);
+}
+
+.comic-card--law {
+  grid-column: span 5;
+  background: var(--yellow);
+  color: var(--ink);
+  transform: rotate(.6deg);
+}
+
+.comic-card--value {
+  grid-column: span 5;
+  background: #fffdf2;
+  color: var(--ink);
+  transform: rotate(.5deg);
+}
+
+.comic-card--bins {
+  grid-column: span 7;
+  background: var(--red);
+  color: #fff;
+  transform: rotate(-.4deg);
+}
+
+.comic-card--app {
+  grid-column: span 6;
+  background: var(--blue);
+  color: #fff;
+  transform: rotate(.4deg);
+}
+
+.comic-card--website {
+  grid-column: span 6;
+  background: #fffdf2;
+  color: var(--ink);
+  transform: rotate(-.5deg);
+}
+
+.comic-card--offers {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 2rem;
+  background: var(--yellow);
+  color: var(--ink);
+  transform: rotate(.2deg);
+}
+
+.comic-card--offers .comic-card__media {
+  margin: 0;
+  padding: 0;
+}
+
+/* BULLES ET ONOMATOPÉES */
+
+.comic-card__decoration {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 5.2rem;
+  aspect-ratio: 1;
+  padding: .5rem;
+  border: 3px solid var(--comic-outline);
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: .85rem;
+  font-weight: 1000;
+  text-align: center;
+  transform: rotate(10deg);
+  pointer-events: none;
+}
+
+.comic-card__bubble {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  max-width: 12rem;
+  padding: .65rem .9rem;
+  border: 2px solid var(--comic-outline);
+  border-radius: 50% 50% 45% 10%;
+  background: #fff;
+  color: var(--ink);
+  font-size: .72rem;
+  font-weight: 900;
+  text-align: center;
+  transform: rotate(4deg);
+}
+
+/* CONCLUSION */
+
+.presentation-outro {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: clamp(1.3rem, 4vw, 2.5rem);
+  border: 3px solid var(--comic-outline);
+  border-radius: .8rem;
+  background: #fff;
+  box-shadow: 6px 6px 0 var(--blue);
+}
+
+.presentation-outro__symbol {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border: 3px solid var(--comic-outline);
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.presentation-outro h2 {
+  margin: .7rem 0 .4rem;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  line-height: 1.1;
+}
+
+.presentation-outro p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* TABLETTE */
+
+@media (max-width: 850px) {
+  .presentation-intro {
+    grid-template-columns: minmax(0, 1fr) 150px;
+  }
+
+  .presentation-outro {
+    grid-template-columns: 60px minmax(0, 1fr);
+  }
+
+  .presentation-outro__symbol {
+    width: 58px;
+    height: 58px;
+  }
+
+  .presentation-outro > .presentation-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .presentation-page {
+    padding: 1rem;
+  }
+
+  .presentation-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.4rem;
+    box-shadow: 4px 4px 0 var(--green);
+  }
+
+  .presentation-intro__sticker {
+    width: 125px;
+    justify-self: end;
+    margin-top: -.5rem;
+  }
+
+  .presentation-intro h1 {
+    font-size: clamp(2.2rem, 11vw, 3.3rem);
+  }
+
+  .comic-board {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.3rem;
+  }
+
+  .comic-card,
+  .comic-card--eco,
+  .comic-card--law,
+  .comic-card--value,
+  .comic-card--bins,
+  .comic-card--app,
+  .comic-card--website,
+  .comic-card--offers {
+    grid-column: 1;
+    transform: none;
+  }
+
+  .comic-card--offers {
+    display: flex;
+    gap: .5rem;
+  }
+
+  .comic-card__decoration {
+    width: 4rem;
+    font-size: .68rem;
+  }
+
+  .comic-card__bubble {
+    position: static;
+    align-self: flex-end;
+    margin-top: .8rem;
+  }
+
+  .presentation-outro {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .presentation-outro > .presentation-button {
+    grid-column: 1;
+    justify-self: stretch;
+  }
+}
+
+/* ACCESSIBILITÉ */
+
+@media (prefers-reduced-motion: reduce) {
+  .comic-card,
+  .comic-card__media img,
+  .presentation-button {
+    transition: none;
+  }
+
+  .comic-card:hover,
+  .presentation-button:hover {
+    transform: none;
+  }
+}
