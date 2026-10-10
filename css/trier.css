@@ -1259,3 +1259,21 @@
     transition: none !important;
   }
 }
+/* Lien d'accessibilité : masqué sauf lors de la navigation au clavier */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  padding: 0.8rem 1rem;
+  background: #fff;
+  color: #14201d;
+  border: 2px solid #14201d;
+  border-radius: 0.4rem;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+```
