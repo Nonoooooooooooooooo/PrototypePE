@@ -516,3 +516,31 @@
     font-size:.85rem;
   }
 }
+
+
+/* ========================================
+   AJUSTEMENTS : VIGNETTES SANS BULLES
+   ======================================== */
+
+/* Masque les bulles de dialogue et leurs queues */
+.comic-bubble,
+.comic-bubble::before,
+.comic-bubble::after,
+.comic-card__bubble,
+.comic-card__bubble::before,
+.comic-card__bubble::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Masque les onomatopées décoratives */
+.comic-sfx,
+.comic-sfx::before,
+.comic-sfx::after,
+.comic-card__sfx,
+.comic-card__sfx::before,
+.comic-card__sfx::after {
+  display: none !important;
+  content: none !important;
+}
+
