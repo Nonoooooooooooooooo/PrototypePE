@@ -679,3 +679,6 @@
   .brand{justify-items:center;order:-1;width:100%;padding-bottom:0}
   .bins{height:6.4rem}.bin{width:5.6rem}.bin__body{min-height:7rem;padding:.5rem .3rem .8rem}.bin__icon{width:1.6rem;height:1.6rem}.bin__label{font-size:.68rem}
 }
+
+@media(max-width:34rem){.bins{flex-wrap:wrap;justify-content:center;height:auto;clip-path:none;padding-bottom:.9rem}}
+@media(prefers-reduced-motion:reduce){.bin,.bin__lid{animation:none!important;transition:none!important}}
