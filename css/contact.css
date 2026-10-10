@@ -672,6 +672,8 @@
     width: 100%;
     max-width: 320px;
   }
+
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
 }
 
 @media(max-width:62rem){
