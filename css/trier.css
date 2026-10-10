@@ -1,0 +1,1261 @@
+/* ==================================================
+   PAGE TRIER / REVALORISER — REVAL'0'RESTO
+   Le header et le footer restent dans style.css
+   ================================================== */
+
+.trier-page {
+  --tri-ink: #14201d;
+  --tri-paper: #fffdf2;
+  --tri-green: var(--green, #2f7d4f);
+  --tri-yellow: var(--yellow, #ffd84d);
+  --tri-blue: var(--blue, #6dbde8);
+  --tri-red: var(--red, #ed6258);
+  --tri-muted: #59645e;
+  --tri-shadow: 6px 6px 0 var(--tri-ink);
+
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: clamp(1rem, 4vw, 3.5rem);
+  color: var(--tri-ink);
+  overflow: clip;
+}
+
+.trier-page *,
+.trier-page *::before,
+.trier-page *::after {
+  box-sizing: border-box;
+}
+
+.trier-page h1,
+.trier-page h2,
+.trier-page h3,
+.trier-page h4,
+.trier-page p {
+  overflow-wrap: break-word;
+}
+
+.trier-page a {
+  color: inherit;
+}
+
+.tri-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: .4rem .75rem;
+  border-radius: .35rem;
+  background: var(--tri-ink);
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Boutons ---------- */
+
+.tri-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  max-width: 100%;
+  padding: .85rem 1.1rem;
+  border: 2px solid var(--tri-ink);
+  border-radius: .5rem;
+  box-shadow: 3px 3px 0 var(--tri-ink);
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.tri-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--tri-ink);
+}
+
+.tri-button--primary {
+  background: var(--tri-green);
+  color: #fff !important;
+}
+
+.tri-button--secondary {
+  background: var(--tri-paper);
+  color: var(--tri-ink) !important;
+}
+
+.tri-button--dark {
+  background: var(--tri-ink);
+  color: #fff !important;
+}
+
+/* ---------- Hero ---------- */
+
+.tri-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(14rem, .8fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: clamp(1.5rem, 5vw, 4rem);
+  margin-bottom: 2.5rem;
+  border: 3px solid var(--tri-ink);
+  border-radius: 1.5rem;
+  background: var(--tri-paper);
+  box-shadow: var(--tri-shadow);
+}
+
+.tri-hero__content {
+  min-width: 0;
+}
+
+.tri-hero h1 {
+  margin: 1rem 0;
+  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  line-height: .99;
+  letter-spacing: -.05em;
+}
+
+.tri-hero h1 span {
+  display: block;
+  color: var(--tri-green);
+}
+
+.tri-hero__content > p {
+  max-width: 45rem;
+  color: var(--tri-muted);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.tri-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem;
+  margin-top: 1.5rem;
+}
+
+.tri-hero__note {
+  margin-top: 1.25rem;
+  font-size: .88rem !important;
+}
+
+.tri-hero__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 18rem;
+}
+
+.tri-hero__circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(17rem, 100%);
+  aspect-ratio: 1;
+  border: 3px solid var(--tri-ink);
+  border-radius: 50%;
+  background: var(--tri-yellow);
+  box-shadow: 7px 7px 0 var(--tri-ink);
+  transform: rotate(5deg);
+  font-weight: 900;
+  text-align: center;
+}
+
+.tri-hero__circle span {
+  font-size: clamp(1.1rem, 2.2vw, 1.7rem);
+  letter-spacing: .06em;
+}
+
+.tri-hero__circle strong {
+  margin: .15rem 0;
+  font-size: 3rem;
+}
+
+.tri-hero__spark {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.tri-hero__spark--one {
+  top: 0;
+  right: 5%;
+  color: var(--tri-red);
+  transform: rotate(12deg);
+}
+
+.tri-hero__spark--two {
+  bottom: 3%;
+  left: 3%;
+  color: var(--tri-green);
+  transform: rotate(-15deg);
+}
+
+/* ---------- Navigation entre les parties ---------- */
+
+.tri-switch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: clamp(4rem, 7vw, 6rem);
+}
+
+.tri-switch a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 2px solid var(--tri-ink);
+  border-radius: .8rem;
+  background: var(--tri-yellow);
+  box-shadow: 4px 4px 0 var(--tri-ink);
+  text-decoration: none;
+  transition: transform .2s ease;
+}
+
+.tri-switch a:nth-child(2) {
+  background: var(--tri-green);
+  color: #fff;
+}
+
+.tri-switch a:hover {
+  transform: translateY(-3px);
+}
+
+.tri-switch__number {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.tri-switch a strong,
+.tri-switch a small {
+  display: block;
+}
+
+.tri-switch a strong {
+  font-size: 1.25rem;
+}
+
+.tri-switch a small {
+  margin-top: .2rem;
+  opacity: .8;
+}
+
+.tri-switch__arrow {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+/* ---------- Sections ---------- */
+
+.tri-section {
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+  scroll-margin-top: 2rem;
+}
+
+.tri-section__heading {
+  max-width: 52rem;
+  margin-bottom: 2rem;
+}
+
+.tri-section__heading h2 {
+  margin: 1rem 0 .8rem;
+  font-size: clamp(2.2rem, 4.8vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -.04em;
+}
+
+.tri-section__heading h2 span {
+  color: var(--tri-green);
+}
+
+.tri-section__heading > p {
+  max-width: 46rem;
+  color: var(--tri-muted);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+/* ---------- Pourquoi trier ---------- */
+
+.tri-reasons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.tri-reason {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 3px solid var(--tri-ink);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 0 var(--tri-ink);
+}
+
+.tri-reason--green {
+  background: var(--tri-green);
+  color: #fff;
+}
+
+.tri-reason--yellow {
+  background: var(--tri-yellow);
+}
+
+.tri-reason--blue {
+  background: var(--tri-blue);
+}
+
+.tri-reason__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  aspect-ratio: 1;
+  margin-bottom: 1rem;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.tri-reason h3 {
+  margin: 0 0 .65rem;
+  font-size: 1.4rem;
+  line-height: 1.15;
+}
+
+.tri-reason p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ---------- Chiffres ---------- */
+
+.tri-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  margin-bottom: 4rem;
+  border: 3px solid var(--tri-ink);
+  border-radius: 1.1rem;
+  background: #e9f2e9;
+}
+
+.tri-stats__intro {
+  grid-column: 1 / -1;
+  max-width: 45rem;
+  margin-bottom: .5rem;
+}
+
+.tri-stats__intro h3 {
+  margin: .75rem 0 .5rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.tri-stats__intro p {
+  margin: 0;
+  color: var(--tri-muted);
+  line-height: 1.6;
+}
+
+.tri-stat {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 2px solid var(--tri-ink);
+  border-radius: .7rem;
+  background: #fff;
+}
+
+.tri-stat strong {
+  display: block;
+  margin-bottom: .7rem;
+  color: var(--tri-green);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.tri-stat p {
+  margin: 0 0 .8rem;
+  line-height: 1.55;
+}
+
+.tri-stat small {
+  display: block;
+  color: var(--tri-muted);
+  font-size: .8rem;
+  line-height: 1.5;
+}
+
+.tri-stats__source {
+  grid-column: 1 / -1;
+  margin: .5rem 0 0;
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+.tri-stats__source a {
+  font-weight: 700;
+}
+
+/* ---------- Annuaire des déchets ---------- */
+
+.tri-directory {
+  margin-top: 4rem;
+}
+
+.tri-directory__heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, .7fr);
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tri-directory__heading h3 {
+  margin: .75rem 0 .5rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.05;
+}
+
+.tri-directory__heading p {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--tri-muted);
+  line-height: 1.6;
+}
+
+.tri-search {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  min-width: 0;
+  font-weight: 800;
+}
+
+.tri-search input {
+  width: 100%;
+  min-width: 0;
+  min-height: 3.1rem;
+  padding: .75rem .9rem;
+  border: 2px solid var(--tri-ink);
+  border-radius: .5rem;
+  background: #fff;
+  color: var(--tri-ink);
+  font: inherit;
+}
+
+.tri-search input:focus-visible,
+.tri-filter:focus-visible,
+.tri-button:focus-visible,
+.tri-reset:focus-visible {
+  outline: 3px solid #1769aa;
+  outline-offset: 3px;
+}
+
+.tri-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-bottom: .75rem;
+}
+
+.tri-filter {
+  padding: .6rem .85rem;
+  border: 2px solid var(--tri-ink);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--tri-ink);
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tri-filter.is-active {
+  background: var(--tri-ink);
+  color: #fff;
+}
+
+.tri-results-status {
+  min-height: 1.5rem;
+  margin: .75rem 0 1rem;
+  color: var(--tri-muted);
+  font-size: .9rem;
+}
+
+.tri-waste-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.25rem;
+}
+
+.tri-waste-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 3px solid var(--tri-ink);
+  border-radius: .9rem;
+  box-shadow: 4px 4px 0 var(--tri-ink);
+  background: #fff;
+}
+
+.tri-waste-card[hidden] {
+  display: none !important;
+}
+
+.tri-waste-card--green {
+  background: #e8f3e8;
+}
+
+.tri-waste-card--yellow {
+  background: #fff5c6;
+}
+
+.tri-waste-card--blue {
+  background: #e7f3fa;
+}
+
+.tri-waste-card--red {
+  background: #ffe8e3;
+}
+
+.tri-waste-card--dark {
+  background: #e8eae7;
+}
+
+.tri-waste-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
+
+.tri-waste-card__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  aspect-ratio: 1;
+  border: 2px solid var(--tri-ink);
+  border-radius: .7rem;
+  background: #fff;
+  font-size: 1.5rem;
+}
+
+.tri-waste-card__tag {
+  max-width: 65%;
+  padding: .3rem .5rem;
+  border: 1px solid var(--tri-ink);
+  border-radius: .3rem;
+  font-size: .7rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.tri-waste-card h4 {
+  margin: 0 0 .6rem;
+  font-size: 1.45rem;
+  line-height: 1.12;
+}
+
+.tri-waste-card > p {
+  margin: 0 0 1.1rem;
+  color: #424c46;
+  line-height: 1.6;
+}
+
+.tri-waste-card__list strong {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.tri-waste-card__list ul,
+.revalue-card__body ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.tri-waste-card__list li,
+.revalue-card__body li {
+  padding-left: .1rem;
+  margin-bottom: .4rem;
+  line-height: 1.5;
+}
+
+.tri-waste-card__tip {
+  padding: .9rem;
+  margin-top: auto;
+  margin-top: 1.25rem;
+  border: 1.5px solid var(--tri-ink);
+  border-radius: .5rem;
+  background: rgba(255, 255, 255, .7);
+}
+
+.tri-waste-card__tip strong {
+  display: block;
+  margin-bottom: .35rem;
+}
+
+.tri-waste-card__tip p {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+.tri-no-results {
+  padding: 2rem;
+  border: 2px dashed var(--tri-ink);
+  border-radius: .8rem;
+  text-align: center;
+}
+
+.tri-no-results h4 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.tri-no-results p {
+  color: var(--tri-muted);
+}
+
+.tri-no-results[hidden] {
+  display: none !important;
+}
+
+/* ---------- Note de vigilance ---------- */
+
+.tri-note {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  border: 2px solid var(--tri-ink);
+  border-radius: .9rem;
+  background: var(--tri-yellow);
+}
+
+.tri-note__icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border: 2px solid var(--tri-ink);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.tri-note h3 {
+  margin: 0 0 .5rem;
+  font-size: 1.25rem;
+}
+
+.tri-note p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ---------- Revalorisation ---------- */
+
+.tri-section--revalue {
+  padding-top: 1rem;
+}
+
+.revalue-intro {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 3px solid var(--tri-ink);
+  border-radius: 1rem;
+  background: var(--tri-green);
+  color: #fff;
+  box-shadow: 4px 4px 0 var(--tri-ink);
+}
+
+.revalue-intro__mark {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  aspect-ratio: 1;
+  border: 2px solid var(--tri-ink);
+  border-radius: 50%;
+  background: var(--tri-yellow);
+  color: var(--tri-ink);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.revalue-intro h3 {
+  margin: 0 0 .5rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+.revalue-intro p {
+  margin: 0;
+  color: #eff7f0;
+  line-height: 1.65;
+}
+
+.revalue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.revalue-card {
+  display: grid;
+  grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr);
+  align-items: stretch;
+  min-width: 0;
+  overflow: hidden;
+  border: 3px solid var(--tri-ink);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 4px 4px 0 var(--tri-ink);
+}
+
+.revalue-card--green {
+  background: #e8f3e8;
+}
+
+.revalue-card--yellow {
+  background: #fff5c6;
+}
+
+.revalue-card--red {
+  background: #ffe8e3;
+}
+
+.revalue-card--blue {
+  background: #e7f3fa;
+}
+
+.revalue-card--wide {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, .55fr) minmax(0, 1.45fr);
+}
+
+.revalue-card__visual {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 15rem;
+  border-right: 2px solid var(--tri-ink);
+  background: var(--tri-green);
+}
+
+.revalue-card__visual span {
+  display: grid;
+  place-items: center;
+  width: 6rem;
+  aspect-ratio: 1;
+  border: 3px solid var(--tri-ink);
+  border-radius: 50%;
+  background: var(--tri-yellow);
+  box-shadow: 4px 4px 0 var(--tri-ink);
+  color: var(--tri-ink);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.revalue-card__visual--metal {
+  background: var(--tri-yellow);
+}
+
+.revalue-card__visual--oil {
+  background: var(--tri-red);
+}
+
+.revalue-card__visual--glass {
+  background: var(--tri-blue);
+}
+
+.revalue-card__visual--bio {
+  background: var(--tri-green);
+}
+
+.revalue-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 1.25rem;
+}
+
+.revalue-card__category {
+  display: inline-block;
+  margin-bottom: .65rem;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.revalue-card__body h3 {
+  margin: 0 0 .75rem;
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+  line-height: 1.08;
+}
+
+.revalue-card__body > p {
+  margin: 0 0 1rem;
+  color: #424c46;
+  line-height: 1.65;
+}
+
+.revalue-card__body h4 {
+  margin: .5rem 0 .6rem;
+  font-size: 1rem;
+}
+
+.revalue-card__economy {
+  width: 100%;
+  padding: .9rem;
+  margin-top: auto;
+  margin-top: 1.25rem;
+  border: 1.5px solid var(--tri-ink);
+  border-radius: .5rem;
+  background: rgba(255, 255, 255, .7);
+}
+
+.revalue-card__economy strong {
+  display: block;
+  margin-bottom: .4rem;
+}
+
+.revalue-card__economy p {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+/* ---------- Chiffres économiques à compléter ---------- */
+
+.revalue-numbers {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  margin-top: 3.5rem;
+  border: 3px solid var(--tri-ink);
+  border-radius: 1.1rem;
+  background: var(--tri-yellow);
+  box-shadow: var(--tri-shadow);
+}
+
+.revalue-numbers__heading {
+  max-width: 48rem;
+  margin-bottom: 1.5rem;
+}
+
+.revalue-numbers__heading h3 {
+  margin: .8rem 0 .6rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.revalue-numbers__heading p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.revalue-numbers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.revalue-numbers__grid article {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.1rem;
+  border: 2px solid var(--tri-ink);
+  border-radius: .7rem;
+  background: var(--tri-paper);
+}
+
+.revalue-numbers__grid article > span {
+  font-size: .9rem;
+  font-weight: 800;
+}
+
+.revalue-numbers__grid strong {
+  margin: .75rem 0;
+  font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+  line-height: 1;
+}
+
+.revalue-numbers__grid small {
+  margin-top: auto;
+  color: var(--tri-muted);
+  line-height: 1.5;
+}
+
+.revalue-numbers__disclaimer {
+  margin: 1.25rem 0 0;
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+/* ---------- Partenaires ---------- */
+
+.tri-partners {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  border: 3px dashed var(--tri-ink);
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.tri-partners__mark {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  border: 2px solid var(--tri-ink);
+  border-radius: .6rem;
+  background: var(--tri-blue);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.tri-partners h3 {
+  margin: .65rem 0 .5rem;
+  font-size: 1.5rem;
+}
+
+.tri-partners p {
+  margin: 0;
+  color: var(--tri-muted);
+  line-height: 1.65;
+}
+
+.tri-partners__badge {
+  padding: .4rem .7rem;
+  border-radius: 999px;
+  background: #e8eae7;
+  font-size: .8rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* ---------- Bandeau final ---------- */
+
+.tri-outro {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  margin: 4rem 0;
+  border: 3px solid var(--tri-ink);
+  border-radius: 1.2rem;
+  background: var(--tri-green);
+  color: #fff;
+  box-shadow: var(--tri-shadow);
+}
+
+.tri-outro__symbol {
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  aspect-ratio: 1;
+  border: 3px solid var(--tri-ink);
+  border-radius: 50%;
+  background: var(--tri-yellow);
+  color: var(--tri-ink);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.tri-outro__text {
+  min-width: 0;
+}
+
+.tri-outro__text .tri-eyebrow {
+  margin-bottom: .7rem;
+}
+
+.tri-outro h2 {
+  margin: 0 0 .6rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.1;
+}
+
+.tri-outro p {
+  max-width: 42rem;
+  margin: 0;
+  color: #eff7f0;
+  line-height: 1.65;
+}
+
+/* ---------- Sources ---------- */
+
+.tri-sources {
+  max-width: 60rem;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  border-top: 2px solid var(--tri-ink);
+}
+
+.tri-sources h2 {
+  margin: 0 0 .75rem;
+  font-size: 1.4rem;
+}
+
+.tri-sources p,
+.tri-sources li {
+  color: var(--tri-muted);
+  line-height: 1.7;
+}
+
+.tri-sources ul {
+  padding-left: 1.25rem;
+}
+
+.tri-sources a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+}
+
+/* ---------- Tablettes ---------- */
+
+@media (max-width: 1000px) {
+  .tri-hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(12rem, .8fr);
+    gap: 2rem;
+  }
+
+  .tri-waste-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .revalue-numbers__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .revalue-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .revalue-card__visual {
+    min-height: 10rem;
+    border-right: 0;
+    border-bottom: 2px solid var(--tri-ink);
+  }
+
+  .revalue-card__visual span {
+    width: 4.5rem;
+    font-size: 2.4rem;
+  }
+
+  .revalue-card--wide {
+    grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr);
+  }
+
+  .revalue-card--wide .revalue-card__visual {
+    border-right: 2px solid var(--tri-ink);
+    border-bottom: 0;
+  }
+
+  .tri-outro {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .tri-outro > .tri-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+/* ---------- Mobiles ---------- */
+
+@media (max-width: 650px) {
+  .trier-page {
+    padding: 1rem;
+  }
+
+  .tri-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 0 var(--tri-ink);
+  }
+
+  .tri-hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+
+  .tri-hero__visual {
+    min-height: 12rem;
+  }
+
+  .tri-hero__circle {
+    width: 11rem;
+    box-shadow: 4px 4px 0 var(--tri-ink);
+  }
+
+  .tri-hero__circle span {
+    font-size: 1.1rem;
+  }
+
+  .tri-hero__circle strong {
+    font-size: 2rem;
+  }
+
+  .tri-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tri-button {
+    width: 100%;
+  }
+
+  .tri-switch {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .tri-reasons {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tri-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tri-stats__intro,
+  .tri-stats__source {
+    grid-column: auto;
+  }
+
+  .tri-directory__heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .tri-waste-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tri-note {
+    padding: 1rem;
+  }
+
+  .revalue-intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .revalue-intro__mark {
+    width: 3.5rem;
+  }
+
+  .revalue-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .revalue-card,
+  .revalue-card--wide {
+    grid-column: auto;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .revalue-card__visual,
+  .revalue-card--wide .revalue-card__visual {
+    min-height: 9rem;
+    border-right: 0;
+    border-bottom: 2px solid var(--tri-ink);
+  }
+
+  .revalue-numbers__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tri-partners {
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: 1rem;
+  }
+
+  .tri-partners__badge {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .tri-outro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1.25rem;
+    box-shadow: 4px 4px 0 var(--tri-ink);
+  }
+
+  .tri-outro > .tri-button {
+    grid-column: auto;
+    justify-self: stretch;
+  }
+
+  .tri-sources {
+    padding-inline: .25rem;
+  }
+}
+
+/* ---------- Très petits mobiles ---------- */
+
+@media (max-width: 360px) {
+  .trier-page {
+    padding: .75rem;
+  }
+
+  .tri-hero {
+    padding: 1rem;
+  }
+
+  .tri-waste-card,
+  .revalue-card__body {
+    padding: 1rem;
+  }
+
+  .tri-waste-card__top {
+    align-items: flex-start;
+  }
+
+  .tri-waste-card__tag {
+    font-size: .65rem;
+  }
+}
+
+/* ---------- Mouvements réduits ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .trier-page *,
+  .trier-page *::before,
+  .trier-page *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
