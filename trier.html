@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Découvrez comment trier les déchets de votre restaurant et les solutions pour les revaloriser : biodéchets, verre, carton, métaux, huiles alimentaires et marc de café.">
+  <meta name="theme-color" content="#2f7d4f">
+
+  <title>Trier et revaloriser les déchets | Reval'0'Resto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/trier.css">
+
+  <script src="js/main.js?v=7" defer></script>
+  <script src="js/trier.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- EN-TÊTE COMMUN -->
+  <header class="site-header">
+    <nav class="bins" aria-label="Navigation principale">
+      <a class="bin bin--green" href="index.html">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10 2h4v4l2 3v12a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3z"/>
+            <path d="M8 13h8"/>
+          </svg>
+          <span class="bin__label">Accueil</span>
+        </span>
+      </a>
+
+      <a class="bin bin--yellow" href="presentation.html">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 7l9-4 9 4v10l-9 4-9-4z"/>
+            <path d="M3 7l9 4 9-4M12 11v10"/>
+          </svg>
+          <span class="bin__label">Présentation</span>
+        </span>
+      </a>
+
+      <a class="bin bin--blue" href="trier.html" aria-current="page">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4" y="3" width="16" height="18" rx="2"/>
+            <path d="M8 8h8M8 12h8M8 16h5"/>
+          </svg>
+          <span class="bin__label">Trier / Revaloriser</span>
+        </span>
+      </a>
+
+      <a class="bin bin--red" href="offres.html">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 4h10v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1z"/>
+            <path d="M7 4c0-1 2-2 5-2s5 1 5 2M7 9h10M7 15h10"/>
+          </svg>
+          <span class="bin__label">Nos offres</span>
+        </span>
+      </a>
+
+      <a class="bin bin--black" href="contact.html">
+        <span class="bin__lid"></span>
+        <span class="bin__body">
+          <svg class="bin__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 7c-2-2-7-1-7 5 0 5 3 9 5 9 1 0 1.5-.5 2-.5s1 .5 2 .5c2 0 5-4 5-9 0-6-5-7-7-5z"/>
+            <path d="M12 7c0-2 1-4 3-4"/>
+          </svg>
+          <span class="bin__label">Contact</span>
+        </span>
+      </a>
+    </nav>
+
+    <a class="brand" href="index.html" aria-label="Reval'0'Resto, retour à l'accueil">
+      <img class="brand__logo" src="images/logo.png" alt="Reval'0'Resto">
+      <span class="brand__slogan">Moins de déchet, plus de valeur</span>
+    </a>
+  </header>
+
+  <main id="contenu" class="trier-page">
+
+    <!-- HERO -->
+    <section class="tri-hero">
+      <div class="tri-hero__content">
+        <span class="tri-eyebrow">Le bon geste, au bon endroit</span>
+
+        <h1>
+          Vos déchets ne sont pas tous
+          <span>des déchets.</span>
+        </h1>
+
+        <p>
+          Dans un restaurant, bien trier permet de réduire les déchets
+          résiduels, de faciliter leur traitement et d'identifier les matières
+          qui peuvent avoir une seconde vie.
+        </p>
+
+        <p>
+          Reval'0'Resto vous aide à comprendre les catégories de déchets,
+          les solutions existantes et les possibilités de valorisation.
+        </p>
+
+        <div class="tri-hero__actions">
+          <a class="tri-button tri-button--primary" href="#trier">
+            Comprendre le tri
+          </a>
+          <a class="tri-button tri-button--secondary" href="#revaloriser">
+            Découvrir la revalorisation
+          </a>
+        </div>
+
+        <p class="tri-hero__note">
+          Les consignes peuvent varier selon votre commune, votre collecteur
+          et la filière de traitement choisie.
+        </p>
+      </div>
+
+      <div class="tri-hero__visual" aria-hidden="true">
+        <div class="tri-hero__circle tri-hero__circle--yellow">
+          <span>TRIER</span>
+          <strong>+</strong>
+          <span>VALORISER</span>
+        </div>
+        <span class="tri-hero__spark tri-hero__spark--one">✳</span>
+        <span class="tri-hero__spark tri-hero__spark--two">↗</span>
+      </div>
+    </section>
+
+    <!-- NAVIGATION INTERNE -->
+    <nav class="tri-switch" aria-label="Accès aux sections">
+      <a href="#trier">
+        <span class="tri-switch__number">01</span>
+        <span>
+          <strong>Trier</strong>
+          <small>Identifier les matières</small>
+        </span>
+        <span class="tri-switch__arrow" aria-hidden="true">↘</span>
+      </a>
+
+      <a href="#revaloriser">
+        <span class="tri-switch__number">02</span>
+        <span>
+          <strong>Revaloriser</strong>
+          <small>Donner une seconde vie</small>
+        </span>
+        <span class="tri-switch__arrow" aria-hidden="true">↘</span>
+      </a>
+    </nav>
+
+    <!-- PARTIE 1 : TRIER -->
+    <section id="trier" class="tri-section tri-section--sorting">
+      <div class="tri-section__heading">
+        <span class="tri-eyebrow">Partie 01 · Le tri</span>
+        <h2>Bien trier, c'est déjà <span>agir.</span></h2>
+        <p>
+          Le tri à la source sépare les matières avant qu'elles ne soient
+          mélangées. C'est une étape essentielle pour rendre possibles
+          leur recyclage ou leur valorisation.
+        </p>
+      </div>
+
+      <div class="tri-reasons">
+        <article class="tri-reason tri-reason--green">
+          <span class="tri-reason__icon" aria-hidden="true">↗</span>
+          <h3>Moins de déchets résiduels</h3>
+          <p>
+            Les matières triées dans les bonnes filières ne sont plus
+            systématiquement dirigées vers le traitement des ordures résiduelles.
+          </p>
+        </article>
+
+        <article class="tri-reason tri-reason--yellow">
+          <span class="tri-reason__icon" aria-hidden="true">◎</span>
+          <h3>Des matières préservées</h3>
+          <p>
+            Un flux propre et bien séparé facilite le recyclage et limite
+            les contaminations entre matières.
+          </p>
+        </article>
+
+        <article class="tri-reason tri-reason--blue">
+          <span class="tri-reason__icon" aria-hidden="true">€</span>
+          <h3>Des ressources à identifier</h3>
+          <p>
+            Certains flux peuvent intéresser des filières spécialisées.
+            Leur reprise et leur valeur dépendent des conditions locales.
+          </p>
+        </article>
+      </div>
+
+      <!-- CHIFFRES DOCUMENTÉS -->
+      <div class="tri-stats">
+        <div class="tri-stats__intro">
+          <span class="tri-eyebrow">Quelques repères vérifiés</span>
+          <h3>Les chiffres donnent le ton.</h3>
+          <p>
+            Ces données nationales permettent de comprendre les enjeux.
+            Elles ne constituent pas des mesures propres à chaque restaurant.
+          </p>
+        </div>
+
+        <article class="tri-stat">
+          <strong>32 %</strong>
+          <p>
+            de la poubelle grise des ménages est constituée de biodéchets.
+          </p>
+          <small>Source : ADEME, Modecom 2024.</small>
+        </article>
+
+        <article class="tri-stat">
+          <strong>71,2 kg</strong>
+          <p>
+            de biodéchets par habitant et par an dans les ordures ménagères
+            résiduelles.
+          </p>
+          <small>Source : ADEME, Modecom 2024.</small>
+        </article>
+
+        <article class="tri-stat">
+          <strong>0,14 kg</strong>
+          <p>
+            de déchets alimentaires par repas : ratio estimatif pour
+            certaines catégories de restaurants et traiteurs.
+          </p>
+          <small>Source : étude ADEME publiée en 2022.</small>
+        </article>
+
+        <p class="tri-stats__source">
+          Sources :
+          <a href="https://www.ecologie.gouv.fr/actualites/6-idees-recues-tri-biodechets" target="_blank" rel="noopener noreferrer">Ministère de la Transition écologique</a>
+          ·
+          <a href="https://www.ecologie.gouv.fr/biodechets" target="_blank" rel="noopener noreferrer">Guide officiel sur les biodéchets</a>
+        </p>
+      </div>
+
+      <!-- FILTRE DES DÉCHETS -->
+      <div class="tri-directory">
+        <div class="tri-directory__heading">
+          <div>
+            <span class="tri-eyebrow">Le guide pratique</span>
+            <h3>Qu'est-ce qui va où&nbsp;?</h3>
+            <p>
+              Recherchez une matière ou sélectionnez une catégorie pour
+              retrouver les principaux déchets concernés.
+            </p>
+          </div>
+
+          <label class="tri-search">
+            <span>Rechercher un déchet</span>
+            <input
+              type="search"
+              id="tri-search"
+              placeholder="Ex. : bouteille, marc, carton…"
+              autocomplete="off"
+            >
+          </label>
+        </div>
+
+        <div class="tri-filters" role="group" aria-label="Filtrer les catégories de déchets">
+          <button type="button" class="tri-filter is-active" data-filter="all" aria-pressed="true">
+            Tout voir
+          </button>
+          <button type="button" class="tri-filter" data-filter="alimentaire" aria-pressed="false">
+            Biodéchets
+          </button>
+          <button type="button" class="tri-filter" data-filter="recyclable" aria-pressed="false">
+            Emballages
+          </button>
+          <button type="button" class="tri-filter" data-filter="verre" aria-pressed="false">
+            Verre
+          </button>
+          <button type="button" class="tri-filter" data-filter="huile" aria-pressed="false">
+            Huiles
+          </button>
+          <button type="button" class="tri-filter" data-filter="specifique" aria-pressed="false">
+            Autres flux
+          </button>
+        </div>
+
+        <p id="tri-results-status" class="tri-results-status" aria-live="polite"></p>
+
+        <div class="tri-waste-grid" id="tri-waste-grid">
+
+          <article class="tri-waste-card tri-waste-card--green" data-category="alimentaire">
+            <div class="tri-waste-card__top">
+              <span class="tri-waste-card__icon" aria-hidden="true">🥕</span>
+              <span class="tri-waste-card__tag">Organique</span>
+            </div>
+            <h4>Biodéchets alimentaires</h4>
+            <p>Les matières organiques issues de la préparation et des repas.</p>
+            <div class="tri-waste-card__list">
+              <strong>À trier notamment</strong>
+              <ul>
+                <li>Épluchures de fruits et légumes</li>
+                <li>Fruits et légumes abîmés</li>
+                <li>Restes de repas et aliments non consommés</li>
+                <li>Pain, riz, pâtes et féculents</li>
+                <li>Viande, poisson et restes de produits animaux</li>
+                <li>Arêtes, petits os et coquilles d'œufs</li>
+                <li>Produits périmés sans leur emballage</li>
+              </ul>
+            </div>
+            <div class="tri-waste-card__tip">
+              <strong>Attention</strong>
+              <p>
+                Les consignes d'acceptation des restes animaux, des liquides
+                et des emballages compostables dépendent de la filière.
+                Vérifiez-les auprès du prestataire.
+              </p>
+            </div>
+          </article>
+
+          <article class="tri-waste-card tri-waste-card--green" data-category="alimentaire">
+            <div class="tri-waste-card__top">
+              <span class="tri-waste-card__icon" aria-hidden="true">☕</span>
+              <span class="tri-waste-card__tag">Flux dédié possible</span>
+            </div>
+            <h4>Marc de café et infusettes</h4>
+            <p>Un flux régulier et intéressant à séparer dans certains établissements.</p>
+            <div class="tri-waste-card__list">
+              <strong>À trier notamment</strong>
+              <ul>
+                <li>Marc de café</li>
+                <li>Filtres à café en papier non plastifié</li>
+                <li>Feuilles de thé</li>
+                <li>Sachets de thé acceptés par la filière choisie</li>
+              </ul>
+            </div>
+            <div class="tri-waste-card__tip">
+              <strong>Bon réflexe</strong>
+              <p>
+                Videz les capsules. Les capsules métalliques ou plastiques
+                relèvent d'une filière distincte, selon les consignes applicables.
+              </p>
+            </div>
+          </article>
+
+          <article class="tri-waste-card tri-waste-card--yellow" data-category="recyclable">
+            <div class="tri-waste-card__top">
+              <span class="tri-waste-card__icon" aria-hidden="true">▤</span>
+              <span class="tri-waste-card__tag">Papier et carton</span>
+            </div>
+            <h4>Cartons et papiers</h4>
+            <p>Une matière recyclable si elle est correctement triée et suffisamment propre.</p>
+            <div class="tri-waste-card__list">
+              <strong>À trier notamment</strong>
+              <ul>
+                <li>Cartons de livraison pliés</li>
+                <li>Carton ondulé et boîtes en carton</li>
+                <li>Feuilles et documents papier</li>
+                <li>Journaux et prospectus</li>
+                <li>Boîtes en carton propres</li>
+              </ul>
+            </div>
+            <div class="tri-waste-card__tip">
+              <strong>Attention</strong>
+              <p>
+                Les cartons souillés de graisse ou de nourriture peuvent être
+                refusés dans le flux papier-carton. Les cartons très souillés
+                doivent suivre la consigne de la filière locale.
+              </p>
+            </div>
+          </article>
+
+          <article class="tri-waste-card tri-waste-card--yellow" data-category="recyclable">
+            <div class="tri-waste-card__top">
+              <span class="tri-waste-card__icon" aria-hidden="true">♻</span>
+              <span class="tri-waste-card__tag">Emballages</span>
+            </div>
+            <h4>Plastiques et emballages</h4>
+            <p>Les consignes varient selon le dispositif de collecte professionnel.</p>
+            <div class="tri-waste-card__list">
+              <strong>À trier selon la consigne locale</strong>
+              <ul>
+                <li>Bouteilles et flacons en plastique</li>
+                <li>Pots, barquettes et boîtes en plastique</li>
+                <li>Films et emballages souples</li>
+                <li>Canettes et petites boîtes métalliques</li>
+                <li>Briques alimentaires</li>
+                <li>Emballages propres en carton léger</li>
+              </ul>
+            </div>
+            <div class="tri-waste-card__tip">
+              <strong>À retenir</strong>
+              <p>
+                Les emballages ne doivent pas être imbriqués les uns dans les
+                autres. Ne placez pas automatiquement tous les plastiques
+                dans un même bac sans vérifier les consignes du collecteur.
+              </p>
+            </div>
+          </article>
+
+          <article class="tri-waste-card tri-waste-card--blue" data-category="verre">
+            <div class="tri-waste-card__top">
+              <span class="tri-waste-card__icon" aria-hidden="true">◇</span>
+              <span class="tri-waste-card__tag">Verre d'emballage</span>
+            </div>
+            <h4>Bouteilles, pots et bocaux</h4>
+            <p>Le verre d'emballage peut être recyclé lorsqu'il est collecté séparément.</p>
+            <div class="tri-waste-card__list">
+              <strong>À trier notamment</strong>
+              <ul>
+                <li>Bouteilles en verre</li>
+                <li>Pots en verre</li>
+                <li>Bocaux alimentaires</li>
+              </ul>
+            </div>
+            <div class="tri-waste-card__tip">
+              <strong>Ne pas mélanger</strong>
+              <p>
+                La vaisselle, les verres à boire, la vitrocéramique, les miroirs
+                et le verre de fenêtre ne vont généralement pas dans le flux
+                du verre d'emballage.
+              </p>
+            </div>
+          </article>
+
+          <article class="tri-waste-card tri-waste-card--red" data-category="huile">
+            <div class="tri-waste-card__top">
+              <span class="tri-waste-card__icon" aria-hidden="true">◉</span>
+              <span class="tri-waste-card__tag">Collecte dédiée</span>
+            </div>
+            <h4>Huiles alimentaires usagées</h4>
+            <p>Les huiles de cuisson nécessitent un stockage et une collecte adaptés.</p>
+            <div class="tri-waste-card__list">
+              <strong>À conserver séparément</strong>
+              <ul>
+                <li>Huiles de friture usagées</li>
+                <li>Huiles végétales de cuisson récupérables</li>
+                <li>Huiles alimentaires issues des friteuses</li>
+              </ul>
+            </div>
+            <div class="tri-waste-card__tip">
+              <strong>Important</strong>
+              <p>
+                Ne versez jamais les huiles dans l'évier ou les toilettes.
+                Utilisez un contenant fermé et adapté. Ne mélangez pas les huiles
+                avec l'eau, les produits chimiques ou les graisses non acceptées.
+              </p>
+            </div>
+          </article>
+
+          <article class="tri-waste-card tri-waste-card--red" data-category="specifique">
+            <div class="tri-waste-card__top">
+              <span class="tri-waste-card__icon" aria-hidden="true">⚙</span>
+              <span class="tri-waste-card__tag">Métaux</span>
+            </div>
+            <h4>Métaux et ferrailles</h4>
+            <p>Certains métaux peuvent être repris par des filières spécialisées.</p>
+            <div class="tri-waste-card__list">
+              <strong>Exemples</strong>
+              <ul>
+                <li>Équipements métalliques hors d'usage</li>
+                <li>Pièces en acier ou en inox</li>
+                <li>Ustensiles métalliques en fin de vie</li>
+                <li>Chutes de métal issues de travaux</li>
+                <li>Certains emballages métalliques</li>
+              </ul>
+            </div>
+            <div class="tri-waste-card__tip">
+              <strong>Attention</strong>
+              <p>
+                Les équipements électriques, les appareils contenant des fluides
+                et les objets composites peuvent relever de filières distinctes.
+              </p>
+            </div>
+          </article>
+
+          <article class="tri-waste-card tri-waste-card--blue" data-category="specifique">
+            <div class="tri-waste-card__top">
+              <span class="tri-waste-card__icon" aria-hidden="true">▣</span>
+              <span class="tri-waste-card__tag">Filière spécialisée</span>
+            </div>
+            <h4>Équipements et déchets particuliers</h4>
+            <p>Certains déchets nécessitent une collecte distincte des bacs habituels.</p>
+            <div class="tri-waste-card__list">
+              <strong>À identifier</strong>
+              <ul>
+                <li>Appareils électriques et électroniques</li>
+                <li>Piles et batteries</li>
+                <li>Cartouches d'impression</li>
+                <li>Ampoules et tubes spécifiques</li>
+                <li>Produits d'entretien dangereux et leurs résidus</li>
+                <li>Mobilier professionnel usagé</li>
+              </ul>
+            </div>
+            <div class="tri-waste-card__tip">
+              <strong>Ne pas jeter dans les bacs ordinaires</strong>
+              <p>
+                Identifiez la filière dédiée. Les produits dangereux doivent
+                rester dans leur contenant adapté et être gérés selon les
+                consignes de sécurité applicables.
+              </p>
+            </div>
+          </article>
+
+          <article class="tri-waste-card tri-waste-card--dark" data-category="specifique">
+            <div class="tri-waste-card__top">
+              <span class="tri-waste-card__icon" aria-hidden="true">…</span>
+              <span class="tri-waste-card__tag">Dernier recours</span>
+            </div>
+            <h4>Déchets résiduels</h4>
+            <p>Ce qui ne peut pas être orienté vers une filière disponible et adaptée.</p>
+            <div class="tri-waste-card__list">
+              <strong>Exemples possibles selon les consignes</strong>
+              <ul>
+                <li>Objets composites non acceptés dans les filières locales</li>
+                <li>Déchets très souillés non valorisables dans les filières disponibles</li>
+                <li>Petits déchets résiduels non recyclables</li>
+              </ul>
+            </div>
+            <div class="tri-waste-card__tip">
+              <strong>Le bon ordre</strong>
+              <p>
+                Réduire les déchets à la source, favoriser le réemploi,
+                trier les matières valorisables, puis traiter les déchets résiduels.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <div id="tri-no-results" class="tri-no-results" hidden>
+          <h4>Aucun déchet trouvé</h4>
+          <p>Essayez un autre mot ou choisissez une autre catégorie.</p>
+          <button type="button" class="tri-button tri-button--primary" id="tri-reset">
+            Réinitialiser les filtres
+          </button>
+        </div>
+      </div>
+
+      <aside class="tri-note">
+        <span class="tri-note__icon" aria-hidden="true">!</span>
+        <div>
+          <h3>Une règle essentielle pour les professionnels</h3>
+          <p>
+            La liste ci-dessus est un guide général. Avant de mettre en place
+            les bacs, vérifiez les consignes de votre collectivité, les
+            conditions du prestataire et les obligations applicables à votre
+            établissement. Un déchet ne doit être orienté vers une filière
+            que si celle-ci l'accepte effectivement.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PARTIE 2 : REVALORISER -->
+    <section id="revaloriser" class="tri-section tri-section--revalue">
+      <div class="tri-section__heading">
+        <span class="tri-eyebrow">Partie 02 · La revalorisation</span>
+        <h2>Et si vos déchets devenaient <span>des ressources&nbsp;?</span></h2>
+        <p>
+          Une fois correctement séparées, certaines matières peuvent servir
+          à fabriquer de nouveaux produits, produire de l'énergie ou être
+          réintroduites dans un cycle de production.
+        </p>
+      </div>
+
+      <div class="revalue-intro">
+        <div class="revalue-intro__mark" aria-hidden="true">↻</div>
+        <div>
+          <h3>Le tri ouvre la porte. La filière fait le reste.</h3>
+          <p>
+            Reval'0'Resto a vocation à faciliter l'identification de solutions
+            et la mise en relation avec des acteurs adaptés. Nous ne réalisons
+            pas nous-mêmes la collecte des déchets.
+          </p>
+        </div>
+      </div>
+
+      <div class="revalue-grid">
+
+        <article class="revalue-card revalue-card--green">
+          <div class="revalue-card__visual revalue-card__visual--coffee" aria-hidden="true">
+            <span>☕</span>
+          </div>
+          <div class="revalue-card__body">
+            <span class="revalue-card__category">Matières organiques</span>
+            <h3>Le marc de café</h3>
+            <p>
+              Le marc de café peut être orienté vers différentes voies de
+              valorisation selon sa qualité, son volume et les équipements
+              disponibles.
+            </p>
+            <h4>Des débouchés possibles</h4>
+            <ul>
+              <li>Compostage et retour de matière organique au sol</li>
+              <li>Méthanisation dans une filière adaptée</li>
+              <li>Projets spécialisés de valorisation de la biomasse</li>
+            </ul>
+            <div class="revalue-card__economy">
+              <strong>Valeur économique</strong>
+              <p>
+                Une reprise rémunérée n'est pas systématique. La collecte,
+                le séchage, le stockage et le transport peuvent peser dans
+                l'équilibre économique.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="revalue-card revalue-card--yellow">
+          <div class="revalue-card__visual revalue-card__visual--metal" aria-hidden="true">
+            <span>⚙</span>
+          </div>
+          <div class="revalue-card__body">
+            <span class="revalue-card__category">Matières métalliques</span>
+            <h3>Les métaux</h3>
+            <p>
+              L'acier, l'inox, l'aluminium et d'autres métaux peuvent être
+              récupérés et réintroduits dans des processus industriels.
+            </p>
+            <h4>Des débouchés possibles</h4>
+            <ul>
+              <li>Recyclage de ferrailles et de pièces métalliques</li>
+              <li>Récupération de certains équipements hors d'usage</li>
+              <li>Réemploi d'équipements encore fonctionnels</li>
+            </ul>
+            <div class="revalue-card__economy">
+              <strong>Une valeur qui dépend du métal</strong>
+              <p>
+                Le type de métal, sa pureté, le volume, le tri et les cours
+                du marché influencent le prix de reprise. Tous les objets
+                métalliques ne sont pas automatiquement rémunérés.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="revalue-card revalue-card--red">
+          <div class="revalue-card__visual revalue-card__visual--oil" aria-hidden="true">
+            <span>◉</span>
+          </div>
+          <div class="revalue-card__body">
+            <span class="revalue-card__category">Huiles alimentaires usagées</span>
+            <h3>Les huiles végétales</h3>
+            <p>
+              Les huiles alimentaires usagées collectées dans de bonnes
+              conditions peuvent alimenter des filières de transformation,
+              notamment pour la production de biocarburants.
+            </p>
+            <h4>Des débouchés possibles</h4>
+            <ul>
+              <li>Transformation en biocarburants, selon la filière</li>
+              <li>Valorisation par des opérateurs spécialisés</li>
+            </ul>
+            <div class="revalue-card__economy">
+              <strong>Une reprise parfois rémunérée</strong>
+              <p>
+                Certains opérateurs proposent une reprise payante ou gratuite.
+                Les conditions dépendent des volumes, de la qualité de l'huile,
+                de la fréquence de collecte et du contrat.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="revalue-card revalue-card--blue">
+          <div class="revalue-card__visual revalue-card__visual--glass" aria-hidden="true">
+            <span>◇</span>
+          </div>
+          <div class="revalue-card__body">
+            <span class="revalue-card__category">Emballages</span>
+            <h3>Le verre, le carton et les emballages</h3>
+            <p>
+              Les emballages triés peuvent rejoindre des filières de recyclage
+              pour fournir de la matière aux fabricants.
+            </p>
+            <h4>Des débouchés possibles</h4>
+            <ul>
+              <li>Recyclage du verre d'emballage</li>
+              <li>Recyclage du papier et du carton</li>
+              <li>Recyclage des métaux et de certains plastiques</li>
+              <li>Réemploi de contenants lorsque le système le permet</li>
+            </ul>
+            <div class="revalue-card__economy">
+              <strong>Une valeur surtout liée à la filière</strong>
+              <p>
+                Le recyclage ne signifie pas nécessairement un paiement au
+                restaurant. La collecte peut être financée par différents
+                dispositifs et contrats.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="revalue-card revalue-card--green revalue-card--wide">
+          <div class="revalue-card__visual revalue-card__visual--bio" aria-hidden="true">
+            <span>♻</span>
+          </div>
+          <div class="revalue-card__body">
+            <span class="revalue-card__category">Biodéchets alimentaires</span>
+            <h3>Compost et énergie</h3>
+            <p>
+              Les déchets alimentaires triés peuvent être transformés en
+              compost ou traités par méthanisation. Cette dernière permet
+              notamment de produire du biogaz et un digestat pouvant être
+              utilisé comme fertilisant lorsqu'il respecte les exigences
+              applicables.
+            </p>
+            <h4>Des débouchés possibles</h4>
+            <ul>
+              <li>Production de compost</li>
+              <li>Production de biogaz par méthanisation</li>
+              <li>Retour de matière organique au sol via des produits adaptés</li>
+            </ul>
+            <div class="revalue-card__economy">
+              <strong>Une valeur qui peut être environnementale avant d'être financière</strong>
+              <p>
+                La collecte et le traitement représentent souvent un coût.
+                Le bénéfice économique peut venir de la réduction des déchets
+                résiduels, d'une meilleure organisation et d'une maîtrise
+                des coûts, plutôt que d'un paiement pour les biodéchets.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- QUELQUES CHIFFRES À COMPLÉTER -->
+      <section class="revalue-numbers" aria-labelledby="revalue-numbers-title">
+        <div class="revalue-numbers__heading">
+          <span class="tri-eyebrow">Le potentiel économique</span>
+          <h3 id="revalue-numbers-title">Quelques chiffres</h3>
+          <p>
+            Les données économiques seront complétées à partir des conditions
+            de reprise de nos futurs partenaires et des volumes réellement
+            observés chez les restaurateurs.
+          </p>
+        </div>
+
+        <div class="revalue-numbers__grid">
+          <article>
+            <span>Huiles alimentaires</span>
+            <strong>X €</strong>
+            <small>Prix de reprise à confirmer selon le volume et le contrat.</small>
+          </article>
+          <article>
+            <span>Métaux</span>
+            <strong>X €</strong>
+            <small>Prix variable selon la matière, la qualité et le marché.</small>
+          </article>
+          <article>
+            <span>Marc de café</span>
+            <strong>X €</strong>
+            <small>Conditions de valorisation à confirmer selon la filière.</small>
+          </article>
+          <article>
+            <span>Économies potentielles</span>
+            <strong>X €</strong>
+            <small>À calculer à partir des coûts de collecte et de traitement.</small>
+          </article>
+        </div>
+
+        <p class="revalue-numbers__disclaimer">
+          Ces emplacements sont des éléments provisoires, et non des tarifs
+          ou des promesses de revenus. Les montants seront publiés après
+          vérification des conditions réelles de reprise.
+        </p>
+      </section>
+
+      <!-- PARTENAIRES À VENIR -->
+      <section class="tri-partners">
+        <div class="tri-partners__mark" aria-hidden="true">+</div>
+        <div>
+          <span class="tri-eyebrow">Bientôt sur cette page</span>
+          <h3>Les partenaires de la revalorisation</h3>
+          <p>
+            Nous présenterons ici les acteurs spécialisés, leurs matières
+            acceptées, leurs zones d'intervention et leurs conditions de reprise.
+            L'objectif : faciliter l'identification d'une solution adaptée
+            à chaque restaurant.
+          </p>
+        </div>
+        <span class="tri-partners__badge">À venir</span>
+      </section>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="tri-outro">
+      <div class="tri-outro__symbol" aria-hidden="true">✓</div>
+      <div class="tri-outro__text">
+        <span class="tri-eyebrow">Passons à l'action</span>
+        <h2>Votre restaurant peut mieux trier.</h2>
+        <p>
+          Vous souhaitez identifier vos déchets, comprendre les filières
+          possibles ou être orienté vers des partenaires adaptés&nbsp;?
+          Parlons de votre établissement.
+        </p>
+      </div>
+      <a class="tri-button tri-button--dark" href="contact.html">
+        Décrire mes besoins <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <!-- SOURCES -->
+    <section class="tri-sources" aria-labelledby="tri-sources-title">
+      <h2 id="tri-sources-title">Sources et ressources utiles</h2>
+      <p>
+        Les chiffres et principes généraux de cette page s'appuient sur
+        les ressources publiques suivantes.
+      </p>
+      <ul>
+        <li>
+          <a href="https://www.ecologie.gouv.fr/biodechets" target="_blank" rel="noopener noreferrer">
+            Ministère de la Transition écologique — tri à la source des biodéchets
+          </a>
+        </li>
+        <li>
+          <a href="https://www.ecologie.gouv.fr/actualites/6-idees-recues-tri-biodechets" target="_blank" rel="noopener noreferrer">
+            Ministère de la Transition écologique — chiffres issus de Modecom 2024
+          </a>
+        </li>
+        <li>
+          <a href="https://librairie.ademe.fr/ged/7164/guide_couts_tri_biodechets_professionnels.pdf?modal=false" target="_blank" rel="noopener noreferrer">
+            ADEME — guide sur le tri des biodéchets des professionnels
+          </a>
+        </li>
+        <li>
+          <a href="https://www.notre-environnement.gouv.fr/themes/economie/les-dechets-ressources/article/le-traitement-des-dechets" target="_blank" rel="noopener noreferrer">
+            Notre-environnement — traitement et recyclage des déchets
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- PIED DE PAGE COMMUN -->
+  <footer class="site-footer">
+    <div class="footer__cols">
+      <div>
+        <h3>Reval'0'Resto</h3>
+        <ul>
+          <li><a href="presentation.html">Qui sommes-nous</a></li>
+          <li><a href="offres.html">Nos offres</a></li>
+          <li><a href="trier.html">Guide du tri</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Informations</h3>
+        <ul>
+          <li><a href="faq.html">Questions fréquentes</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="zone.html">Zone d'intervention</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Informations légales</h3>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+          <li><a href="cgv.html">Conditions générales de vente</a></li>
+          <li><a href="cookies.html">Gestion des cookies</a></li>
+          <li><a href="plan-du-site.html">Plan du site</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-social">
+      <a class="social-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Retrouvez-nous sur Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#1877F2" d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8z"/>
+        </svg>
+        <span>Facebook</span>
+      </a>
+
+      <a class="social-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Retrouvez-nous sur Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#FFDC80"/>
+              <stop offset="35%" stop-color="#F77737"/>
+              <stop offset="65%" stop-color="#E1306C"/>
+              <stop offset="100%" stop-color="#833AB4"/>
+            </linearGradient>
+          </defs>
+          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="url(#instagram-gradient)" stroke-width="2.2"/>
+          <circle cx="12" cy="12" r="4" fill="none" stroke="url(#instagram-gradient)" stroke-width="2.2"/>
+          <circle cx="17.5" cy="6.8" r="1.3" fill="#E1306C"/>
+        </svg>
+        <span>Instagram</span>
+      </a>
+
+      <a class="social-youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Retrouvez-nous sur YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#FF0033" d="M23 7a3 3 0 0 0-2.1-2.1C19 4.4 12 4.4 12 4.4s-7 0-8.9.5A3 3 0 0 0 1 7a31 31 0 0 0-.5 5 31 31 0 0 0 .5 5 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5A3 3 0 0 0 23 17a31 31 0 0 0 .5-5 31 31 0 0 0-.5-5ZM9.7 15.5v-7l6 3.5z"/>
+        </svg>
+        <span>YouTube</span>
+      </a>
+
+      <a class="social-x" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Retrouvez-nous sur X">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#ffffff" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.4l7.3-8.4L1.9 2h6.4l4.5 6.8zM17.8 20h1.7L7.4 3.9H5.6z"/>
+        </svg>
+        <span>X</span>
+      </a>
+    </div>
+
+    <div class="footer__legal">
+      <p>
+        <strong>Reval'0'Resto</strong> –
+        51 chemin des Mouilles 69130 Écully –
+        Tél. ** ** ** ** 72 –
+        <a href="mailto:contactrevaloresto@gmail.fr">contactrevaloresto@gmail.fr</a> –
+        Disponible du lundi au vendredi, 8h-19h
+      </p>
+      <p>© <span id="annee">2026</span> Reval'0'Resto. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>
