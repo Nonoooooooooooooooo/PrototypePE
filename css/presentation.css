@@ -505,3 +505,14 @@
   .stripes,.band--reverse .stripes{position:static;width:100%;height:.8rem;transform:none;box-shadow:none}
   .band__text,.band--reverse .band__text{flex:none;padding:2rem 1.5rem}
 }
+
+@media (max-width: 48rem){
+  .brand__logo{
+    width:14rem;
+    height:6rem;
+  }
+
+  .brand__slogan{
+    font-size:.85rem;
+  }
+}
