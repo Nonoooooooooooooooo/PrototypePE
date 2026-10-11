@@ -1,429 +1,346 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez les offres Reval'0'Resto : bacs de tri, abonnements Starter, Premium et VIP pour mieux trier et valoriser vos déchets.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les bacs de tri et les abonnements Reval'0'Resto pour réduire vos déchets et mieux les valoriser.">
+    <title>Nos offres | Reval'0'Resto</title>
 
-  <title>Nos offres | Reval'0'Resto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/offres.css">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/offres.css">
-  <script src="js/main.js" defer></script>
-  <script src="js/offres.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/offres.js" defer></script>
 </head>
 
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="header-brand">
-      <a href="index.html" class="brand-logo" aria-label="Reval'0'Resto, accueil">
-        Reval<span>'0'</span>Resto
-      </a>
-      <p class="brand-slogan">Moins de déchet, plus de valeur</p>
-    </div>
+    <!-- HEADER COMMUN DU SITE -->
+    <!-- Conserve ici le header exact de ta page index.html :
+         les cinq poubelles animées, le logo images/logo.png,
+         le slogan et la navigation. -->
 
-    <nav class="main-navigation" aria-label="Navigation principale">
-      <a class="nav-link" href="index.html">
-        <span class="nav-bin nav-bin--green" aria-hidden="true">♻</span>
-        <span>Accueil</span>
-      </a>
+    <header class="site-header">
+        <div class="header-bins" aria-hidden="true">
+            <span class="header-bin bin-yellow">♻</span>
+            <span class="header-bin bin-green">♻</span>
+            <span class="header-bin bin-blue">♻</span>
+            <span class="header-bin bin-red">♻</span>
+            <span class="header-bin bin-dark">♻</span>
+        </div>
 
-      <a class="nav-link" href="presentation.html">
-        <span class="nav-bin nav-bin--yellow" aria-hidden="true">i</span>
-        <span>Qui sommes-nous ?</span>
-      </a>
-
-      <a class="nav-link" href="trier.html">
-        <span class="nav-bin nav-bin--blue" aria-hidden="true">↻</span>
-        <span>Trier / Revaloriser</span>
-      </a>
-
-      <a class="nav-link nav-link--active" href="offres.html" aria-current="page">
-        <span class="nav-bin nav-bin--red" aria-hidden="true">€</span>
-        <span>Nos offres</span>
-      </a>
-
-      <a class="nav-link" href="contact.html">
-        <span class="nav-bin nav-bin--black" aria-hidden="true">✉</span>
-        <span>Contact</span>
-      </a>
-    </nav>
-  </header>
-
-  <!-- ================= CONTENU ================= -->
-  <main id="contenu" class="offers-page">
-
-    <section class="offers-intro">
-      <span class="section-eyebrow">NOS SOLUTIONS</span>
-      <h1>Des offres adaptées à vos besoins</h1>
-      <p>
-        Équipez-vous, simplifiez votre tri et donnez davantage de valeur
-        à vos déchets grâce aux solutions Reval'0'Resto.
-      </p>
-    </section>
-
-    <!-- OFFRE PONCTUELLE : BACS -->
-    <section class="bins-offer" aria-labelledby="bins-title">
-      <div class="bins-offer__icon" aria-hidden="true">♻</div>
-
-      <div class="bins-offer__content">
-        <span class="offer-label">ACHAT PONCTUEL</span>
-        <h2 id="bins-title">Vos bacs de tri</h2>
-        <p>
-          Équipez votre établissement avec des bacs adaptés à votre
-          organisation du tri des déchets.
-        </p>
-        <ul class="bins-benefits">
-          <li>Équipement de tri</li>
-          <li>Organisation simplifiée</li>
-          <li>Solution sans abonnement mensuel</li>
-        </ul>
-      </div>
-
-      <div class="bins-offer__price">
-        <p class="price"><strong>99,99 €</strong></p>
-        <p class="price-caption">Paiement comptant</p>
-        <a class="offer-button offer-button--dark" href="contact.html">
-          Demander mes bacs <span aria-hidden="true">→</span>
+        <a class="site-logo" href="index.html" aria-label="Reval'0'Resto, accueil">
+            <img src="images/logo.png" alt="Logo Reval'0'Resto">
         </a>
-      </div>
-    </section>
 
-    <!-- CARTES DES ABONNEMENTS -->
-    <section class="plans-section" aria-labelledby="plans-title">
-      <div class="section-heading">
-        <span class="section-eyebrow">NOS ABONNEMENTS</span>
-        <h2 id="plans-title">Choisissez votre formule</h2>
-        <p>Trois niveaux d'accompagnement pour valoriser vos déchets.</p>
-      </div>
+        <p class="site-slogan">Moins de déchet, plus de valeur</p>
 
-      <div class="plans-grid">
+        <nav class="main-navigation" aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="presentation.html">Qui sommes-nous ?</a>
+            <a href="trier.html">Bien trier</a>
+            <a href="offres.html" aria-current="page">Nos offres</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-        <!-- STARTER -->
-        <article class="plan-card plan-card--starter">
-          <div class="plan-card__top">
-            <span class="plan-tag">L'essentiel</span>
-            <h3>Starter</h3>
-            <p class="plan-description">
-              Les outils indispensables pour mieux gérer vos déchets.
-            </p>
+    <main id="contenu" class="offers-page">
 
-            <p class="plan-price">
-              <strong>30 €</strong>
-              <span>/ mois</span>
-            </p>
-          </div>
-
-          <div class="plan-card__body">
-            <p class="features-title">Inclus dans votre offre</p>
-            <ul class="feature-list">
-              <li>Accès à l'application</li>
-              <li>Vidéos de sensibilisation</li>
-              <li>Tableau de bord des déchets</li>
-              <li>Fiches d'information</li>
-              <li>Options de cashback sélectionnées</li>
-            </ul>
-          </div>
-
-          <a class="offer-button offer-button--starter" href="#details-starter">
-            En savoir plus <span aria-hidden="true">↓</span>
-          </a>
-        </article>
-
-        <!-- PREMIUM -->
-        <article class="plan-card plan-card--premium">
-          <div class="plan-card__top">
-            <span class="plan-tag">Le plus complet</span>
-            <h3>Premium</h3>
-            <p class="plan-description">
-              Plus d'avantages et une aide intelligente au tri.
-            </p>
-
-            <p class="plan-price">
-              <strong>60 €</strong>
-              <span>/ mois</span>
-            </p>
-          </div>
-
-          <div class="plan-card__body">
-            <p class="features-title">Tout Starter, avec en plus</p>
-            <ul class="feature-list">
-              <li>Davantage d'options de cashback</li>
-              <li>Assistant de tri par intelligence artificielle</li>
-              <li>Identification par photographie</li>
-              <li>Orientation selon les règles locales</li>
-              <li>Accompagnement renforcé au quotidien</li>
-            </ul>
-          </div>
-
-          <a class="offer-button offer-button--premium" href="#details-premium">
-            En savoir plus <span aria-hidden="true">↓</span>
-          </a>
-        </article>
-
-        <!-- VIP -->
-        <article class="plan-card plan-card--vip">
-          <div class="plan-card__top">
-            <span class="plan-tag">L'expérience complète</span>
-            <h3>VIP</h3>
-            <p class="plan-description">
-              La formule la plus complète pour votre établissement.
-            </p>
-
-            <p class="plan-price">
-              <strong>90 €</strong>
-              <span>/ mois</span>
-            </p>
-          </div>
-
-          <div class="plan-card__body">
-            <p class="features-title">Tout Premium, avec en plus</p>
-            <ul class="feature-list">
-              <li>Garantie sur les bacs pendant l'abonnement</li>
-              <li>Accès à toutes les options de cashback</li>
-              <li>Avantages des partenaires participants</li>
-              <li>Toutes les fonctionnalités précédentes</li>
-              <li>La solution la plus complète</li>
-            </ul>
-          </div>
-
-          <a class="offer-button offer-button--vip" href="#details-vip">
-            En savoir plus <span aria-hidden="true">↓</span>
-          </a>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ================= DESCRIPTIFS COMPLETS ================= -->
-    <section class="details-section" aria-labelledby="details-title">
-      <div class="section-heading">
-        <span class="section-eyebrow">ALLONS PLUS LOIN</span>
-        <h2 id="details-title">Découvrez chaque abonnement en détail</h2>
-        <p>Comparez les services et choisissez la formule adaptée à votre activité.</p>
-      </div>
-
-      <!-- DÉTAIL STARTER -->
-      <article id="details-starter" class="plan-details plan-details--starter">
-        <div class="plan-details__heading">
-          <span class="details-number">01</span>
-          <div>
-            <span class="details-kicker">L'essentiel pour commencer</span>
-            <h3>Starter</h3>
-            <p class="details-price">30 € <span>/ mois</span></p>
-          </div>
-          <span class="details-symbol" aria-hidden="true">♻</span>
-        </div>
-
-        <div class="plan-details__content">
-          <div>
-            <h4>Un meilleur suivi de vos déchets</h4>
+        <!-- INTRODUCTION -->
+        <section class="offers-intro">
+            <span class="offers-eyebrow">Reval'0'Resto</span>
+            <h1>Nos offres</h1>
             <p>
-              L'offre Starter vous donne accès à l'application Reval'0'Resto
-              et à un tableau de bord pour suivre et mieux comprendre la
-              gestion des déchets de votre établissement.
+                Des solutions adaptées à vos besoins pour mieux trier,
+                réduire vos déchets et donner une nouvelle valeur à vos ressources.
             </p>
+        </section>
+
+        <!-- ACHAT DES BACS -->
+        <section class="bins-purchase" aria-labelledby="bins-title">
+            <div class="bins-illustration" aria-hidden="true">
+                <span>♻</span>
+            </div>
+
+            <div class="bins-purchase-content">
+                <span class="offer-tag">Équipement</span>
+                <h2 id="bins-title">Vos bacs de tri</h2>
+                <p>
+                    Équipez votre établissement avec nos bacs de tri
+                    pour faciliter le tri au quotidien.
+                </p>
+                <p class="bins-price">
+                    <strong>99,99 €</strong>
+                    <span> / achat comptant</span>
+                </p>
+                <a class="offer-button button-yellow" href="contact.html">
+                    Commander vos bacs
+                </a>
+            </div>
+        </section>
+
+        <!-- CARTES DES ABONNEMENTS -->
+        <section class="plans-section" aria-labelledby="plans-title">
+            <div class="section-heading">
+                <span class="offers-eyebrow">Nos abonnements</span>
+                <h2 id="plans-title">Choisissez votre formule</h2>
+                <p>
+                    Des outils pour simplifier le tri et valoriser davantage vos déchets.
+                </p>
+            </div>
+
+            <div class="plans-grid">
+
+                <!-- STARTER -->
+                <article class="plan-card plan-starter">
+                    <div class="plan-card-top">
+                        <span class="plan-number">01</span>
+                        <span class="plan-label">L'essentiel</span>
+                    </div>
+
+                    <h3>Starter</h3>
+                    <p class="plan-description">
+                        Les outils indispensables pour commencer.
+                    </p>
+
+                    <p class="plan-price">
+                        <strong>30 €</strong>
+                        <span>/ mois</span>
+                    </p>
+
+                    <ul class="plan-features">
+                        <li>Accès à l'application</li>
+                        <li>Vidéos de sensibilisation</li>
+                        <li>Tableau de bord de gestion des déchets</li>
+                        <li>Fiches d'information sur le traitement des déchets</li>
+                        <li>Accès à certaines offres de cashback</li>
+                    </ul>
+
+                    <a class="offer-button button-green" href="#details-starter">
+                        En savoir plus
+                    </a>
+                </article>
+
+                <!-- PREMIUM -->
+                <article class="plan-card plan-premium">
+                    <div class="plan-card-top">
+                        <span class="plan-number">02</span>
+                        <span class="plan-label">Plus de possibilités</span>
+                    </div>
+
+                    <h3>Premium</h3>
+                    <p class="plan-description">
+                        Des fonctionnalités avancées pour mieux trier.
+                    </p>
+
+                    <p class="plan-price">
+                        <strong>60 €</strong>
+                        <span>/ mois</span>
+                    </p>
+
+                    <ul class="plan-features">
+                        <li>Tous les avantages Starter</li>
+                        <li>Davantage d'offres de cashback</li>
+                        <li>Reconnaissance des objets par photo grâce à l'IA</li>
+                        <li>Conseils de tri selon les consignes locales disponibles</li>
+                    </ul>
+
+                    <a class="offer-button button-blue" href="#details-premium">
+                        En savoir plus
+                    </a>
+                </article>
+
+                <!-- VIP -->
+                <article class="plan-card plan-vip">
+                    <div class="plan-card-top">
+                        <span class="plan-number">03</span>
+                        <span class="plan-label">Offre complète</span>
+                    </div>
+
+                    <h3>VIP</h3>
+                    <p class="plan-description">
+                        La formule complète pour aller plus loin.
+                    </p>
+
+                    <p class="plan-price">
+                        <strong>90 €</strong>
+                        <span>/ mois</span>
+                    </p>
+
+                    <ul class="plan-features">
+                        <li>Tous les avantages des formules précédentes</li>
+                        <li>Garantie sur les bacs pendant l'abonnement, selon conditions</li>
+                        <li>Accès à toutes les offres de cashback proposées par nos partenaires</li>
+                        <li>Accompagnement complet avec les outils inclus</li>
+                    </ul>
+
+                    <a class="offer-button button-red" href="#details-vip">
+                        En savoir plus
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- DÉTAILS STARTER -->
+        <section id="details-starter" class="plan-details details-starter">
+            <div class="details-number">01</div>
+            <div class="details-content">
+                <span class="offers-eyebrow">Formule Starter</span>
+                <h2>Les fondamentaux du tri</h2>
+                <p>
+                    Starter vous donne accès aux outils essentiels pour organiser
+                    le tri dans votre établissement et sensibiliser vos équipes.
+                </p>
+
+                <ul>
+                    <li>Une application pour retrouver vos outils de tri.</li>
+                    <li>Des vidéos pour expliquer les bonnes pratiques.</li>
+                    <li>Un tableau de bord pour suivre la gestion de vos déchets.</li>
+                    <li>Des fiches pédagogiques sur les filières de traitement.</li>
+                    <li>Des opportunités de cashback auprès de partenaires participants.</li>
+                </ul>
+
+                <p class="details-price">30 € par mois</p>
+                <a class="offer-button button-green" href="contact.html">
+                    Choisir Starter
+                </a>
+            </div>
+        </section>
+
+        <!-- DÉTAILS PREMIUM -->
+        <section id="details-premium" class="plan-details details-premium">
+            <div class="details-number">02</div>
+            <div class="details-content">
+                <span class="offers-eyebrow">Formule Premium</span>
+                <h2>Un tri plus simple grâce à l'IA</h2>
+                <p>
+                    Premium reprend les avantages de Starter et ajoute des
+                    fonctionnalités conçues pour vous aider à identifier
+                    la bonne consigne de tri.
+                </p>
+
+                <ul>
+                    <li>Tous les outils inclus dans Starter.</li>
+                    <li>Un choix plus large d'offres de cashback.</li>
+                    <li>La possibilité de photographier un objet dans l'application.</li>
+                    <li>Une aide à l'identification du bac adapté, selon les consignes locales disponibles.</li>
+                </ul>
+
+                <p class="details-note">
+                    Les résultats de l'IA constituent une aide au tri. Vérifiez
+                    les consignes de votre collectivité lorsqu'elles ne sont pas
+                    disponibles ou lorsqu'un doute subsiste.
+                </p>
+
+                <p class="details-price">60 € par mois</p>
+                <a class="offer-button button-blue" href="contact.html">
+                    Choisir Premium
+                </a>
+            </div>
+        </section>
+
+        <!-- DÉTAILS VIP -->
+        <section id="details-vip" class="plan-details details-vip">
+            <div class="details-number">03</div>
+            <div class="details-content">
+                <span class="offers-eyebrow">Formule VIP</span>
+                <h2>La formule la plus complète</h2>
+                <p>
+                    VIP rassemble les fonctionnalités des formules Starter et
+                    Premium et ajoute des avantages complémentaires.
+                </p>
+
+                <ul>
+                    <li>Tous les outils et fonctionnalités des formules précédentes.</li>
+                    <li>L'accès à toutes les offres de cashback proposées par nos partenaires.</li>
+                    <li>Une garantie sur les bacs pendant la durée de l'abonnement, selon les conditions contractuelles.</li>
+                </ul>
+
+                <p class="details-note">
+                    Les offres de cashback dépendent des partenaires participants.
+                    Les modalités, exclusions et limites de la garantie sur les bacs
+                    devront être précisées dans les conditions commerciales.
+                </p>
+
+                <p class="details-price">90 € par mois</p>
+                <a class="offer-button button-red" href="contact.html">
+                    Choisir VIP
+                </a>
+            </div>
+        </section>
+
+        <!-- APPEL À L'ACTION -->
+        <section class="offers-cta">
+            <span class="offers-eyebrow">Besoin d'un conseil ?</span>
+            <h2>Vous ne savez pas quelle offre choisir ?</h2>
             <p>
-              Les fiches d'information vous aident à identifier les bonnes
-              pratiques de tri et à mieux comprendre les filières de traitement.
+                Contactez-nous pour discuter de vos besoins et trouver la formule
+                la plus adaptée à votre établissement.
             </p>
-          </div>
+            <a class="offer-button button-light" href="contact.html">
+                Nous contacter
+            </a>
+        </section>
 
-          <div>
-            <h4>Les outils inclus</h4>
-            <ul class="details-list">
-              <li>Application Reval'0'Resto</li>
-              <li>Tableau de bord de gestion des déchets</li>
-              <li>Vidéos de sensibilisation</li>
-              <li>Fiches d'information sur le traitement des déchets</li>
-              <li>Accès à certaines options de cashback</li>
-            </ul>
-          </div>
+    </main>
+
+    <!-- FOOTER COMMUN DU SITE -->
+    <!-- Pour conserver ton identité graphique à l'identique,
+         remplace ce footer par le bloc exact de ton index.html
+         si celui-ci comporte déjà les SVG, les liens légaux,
+         les coordonnées et les quatre réseaux sociaux. -->
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Reval'0'Resto">
+                </a>
+                <p>Moins de déchet, plus de valeur.</p>
+                <p>
+                    Reval'0'Resto facilite le tri et la valorisation
+                    des déchets en mettant en relation les acteurs concernés.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h2>Navigation</h2>
+                <a href="index.html">Accueil</a>
+                <a href="presentation.html">Qui sommes-nous ?</a>
+                <a href="trier.html">Bien trier</a>
+                <a href="offres.html">Nos offres</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-column">
+                <h2>Informations</h2>
+                <a href="mentions-legales.html">Mentions légales</a>
+                <a href="politique-confidentialite.html">Confidentialité</a>
+                <a href="cgv.html">Conditions générales</a>
+            </div>
+
+            <div class="footer-column">
+                <h2>Contact</h2>
+                <a href="contact.html">Nous écrire</a>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" aria-label="Facebook">Facebook</a>
+                    <a href="https://www.instagram.com/" aria-label="Instagram">Instagram</a>
+                    <a href="https://www.youtube.com/" aria-label="YouTube">YouTube</a>
+                    <a href="https://x.com/" aria-label="X">X</a>
+                </div>
+            </div>
         </div>
 
-        <div class="details-highlight">
-          <strong>Pour qui ?</strong>
-          <p>
-            Pour les établissements qui souhaitent structurer leur tri,
-            sensibiliser leurs équipes et commencer à tirer parti de leurs
-            efforts de réduction des déchets.
-          </p>
-        </div>
-
-        <a class="details-contact" href="contact.html?offre=starter">
-          Je suis intéressé par Starter <span aria-hidden="true">→</span>
-        </a>
-      </article>
-
-      <!-- DÉTAIL PREMIUM -->
-      <article id="details-premium" class="plan-details plan-details--premium">
-        <div class="plan-details__heading">
-          <span class="details-number">02</span>
-          <div>
-            <span class="details-kicker">Plus d'outils, plus d'avantages</span>
-            <h3>Premium</h3>
-            <p class="details-price">60 € <span>/ mois</span></p>
-          </div>
-          <span class="details-symbol" aria-hidden="true">✦</span>
-        </div>
-
-        <div class="plan-details__content">
-          <div>
-            <h4>Toutes les bases de Starter</h4>
+        <div class="footer-bottom">
             <p>
-              Premium reprend l'ensemble des fonctionnalités de Starter et
-              donne accès à davantage d'options de cashback auprès des
-              partenaires participants.
+                © <span id="copyright-year"></span> Reval'0'Resto.
+                Tous droits réservés.
             </p>
-            <p>
-              Cette formule ajoute également un assistant de tri utilisant
-              l'intelligence artificielle : photographiez un objet pour
-              obtenir une indication sur le bac adapté, en tenant compte
-              des consignes locales disponibles.
-            </p>
-          </div>
-
-          <div>
-            <h4>Les avantages Premium</h4>
-            <ul class="details-list">
-              <li>Toutes les fonctionnalités de Starter</li>
-              <li>Plus d'options de cashback</li>
-              <li>Assistant de tri par intelligence artificielle</li>
-              <li>Reconnaissance d'objets à partir d'une photo</li>
-              <li>Indications de tri tenant compte des règles locales disponibles</li>
-            </ul>
-          </div>
         </div>
-
-        <div class="details-highlight">
-          <strong>Pour qui ?</strong>
-          <p>
-            Pour les professionnels qui veulent simplifier les décisions de
-            tri au quotidien et profiter d'un éventail plus large d'avantages.
-          </p>
-        </div>
-
-        <p class="details-note">
-          Les indications de l'assistant dépendent de la qualité de la
-          photographie et des consignes locales disponibles. Elles ne
-          remplacent pas les instructions officielles de collecte.
-        </p>
-
-        <a class="details-contact" href="contact.html?offre=premium">
-          Je suis intéressé par Premium <span aria-hidden="true">→</span>
-        </a>
-      </article>
-
-      <!-- DÉTAIL VIP -->
-      <article id="details-vip" class="plan-details plan-details--vip">
-        <div class="plan-details__heading">
-          <span class="details-number">03</span>
-          <div>
-            <span class="details-kicker">L'accompagnement le plus complet</span>
-            <h3>VIP</h3>
-            <p class="details-price">90 € <span>/ mois</span></p>
-          </div>
-          <span class="details-symbol" aria-hidden="true">★</span>
-        </div>
-
-        <div class="plan-details__content">
-          <div>
-            <h4>Tous les services, sans compromis</h4>
-            <p>
-              L'offre VIP rassemble toutes les fonctionnalités de Starter
-              et Premium, y compris l'assistant de tri par photographie et
-              l'accès aux options de cashback.
-            </p>
-            <p>
-              Elle comprend également une garantie sur les bacs pendant la
-              durée de l'abonnement, selon les conditions qui seront définies
-              pour cette garantie.
-            </p>
-          </div>
-
-          <div>
-            <h4>Les avantages VIP</h4>
-            <ul class="details-list">
-              <li>Toutes les fonctionnalités de Starter et Premium</li>
-              <li>Accès à toutes les options de cashback disponibles</li>
-              <li>Avantages proposés par les partenaires participants</li>
-              <li>Garantie sur les bacs pendant l'abonnement</li>
-              <li>Accès à la solution Reval'0'Resto la plus complète</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="details-highlight">
-          <strong>Pour qui ?</strong>
-          <p>
-            Pour les établissements qui veulent bénéficier de l'ensemble
-            des outils, des avantages partenaires et d'une garantie sur leurs bacs.
-          </p>
-        </div>
-
-        <p class="details-note">
-          Les conditions, exclusions et modalités de la garantie sur les bacs
-          devront être précisées avant la commercialisation de l'offre.
-        </p>
-
-        <a class="details-contact" href="contact.html?offre=vip">
-          Je suis intéressé par VIP <span aria-hidden="true">→</span>
-        </a>
-      </article>
-    </section>
-
-    <!-- APPEL À L'ACTION -->
-    <section class="offers-cta">
-      <span class="section-eyebrow">UN BESOIN PARTICULIER ?</span>
-      <h2>Construisons une solution adaptée à votre établissement.</h2>
-      <p>
-        Vous hésitez entre plusieurs formules ou souhaitez équiper votre
-        établissement en bacs de tri ?
-      </p>
-      <a href="contact.html" class="offer-button offers-cta__button">
-        Contactez-nous <span aria-hidden="true">→</span>
-      </a>
-    </section>
-
-  </main>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="footer-main">
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          Reval<span>'0'</span>Resto
-        </a>
-        <p>Moins de déchet, plus de valeur.</p>
-        <p>
-          Des solutions pour mieux trier et favoriser la valorisation
-          des déchets professionnels.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <h2>Navigation</h2>
-        <a href="index.html">Accueil</a>
-        <a href="presentation.html">Qui sommes-nous ?</a>
-        <a href="trier.html">Trier / Revaloriser</a>
-        <a href="offres.html">Nos offres</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-contact">
-        <h2>Parlons de votre projet</h2>
-        <p>Besoin d'informations sur nos offres ?</p>
-        <a href="contact.html" class="footer-contact-link">Nous contacter →</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© <span id="current-year"></span> Reval'0'Resto — Tous droits réservés.</p>
-      <p>Moins de déchet, plus de valeur.</p>
-    </div>
-  </footer>
+    </footer>
 </body>
 </html>
