@@ -1,677 +1,742 @@
 
-/* =========================================
+/* ==========================================
    REVAL'0'RESTO — PAGE OFFRES
-   Les styles du header et du footer restent
-   gérés par css/style.css.
-========================================= */
-
-:root {
-    --offers-green: #2f7d4f;
-    --offers-yellow: #f2c230;
-    --offers-blue: #2a62a8;
-    --offers-red: #c0392b;
-    --offers-dark: #22282b;
-    --offers-white: #ffffff;
-    --offers-sage: #e8efe7;
-    --offers-text: #29312d;
-    --offers-muted: #626b65;
-    --offers-gold: #e5bb50;
-    --offers-radius: 22px;
-    --offers-shadow: 0 12px 30px rgba(34, 40, 43, 0.10);
-}
+   Le header et le footer sont gérés par
+   css/style.css : ne pas les redéfinir ici.
+========================================== */
 
 .offers-page {
-    color: var(--offers-text);
-    overflow: hidden;
+  --offers-ink: var(--ink, #14201d);
+  --offers-paper: var(--paper, #dce9df);
+  --offers-green: var(--green, #2f7d4f);
+  --offers-yellow: var(--yellow, #f2c230);
+  --offers-blue: var(--blue, #2a62a8);
+  --offers-red: var(--red, #c0392b);
+  --offers-black: var(--black, #22282b);
+  --offers-muted: var(--muted, #4d625d);
+  color: var(--offers-ink);
+  overflow: hidden;
 }
 
 .offers-page *,
 .offers-page *::before,
 .offers-page *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.offers-page h1,
+.offers-page h2,
+.offers-page h3,
+.offers-page p {
+  margin-top: 0;
 }
 
 .offers-page a {
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* ACCESSIBILITÉ */
-
-.skip-link {
-    position: absolute;
-    top: -100px;
-    left: 16px;
-    z-index: 10000;
-    padding: 12px 18px;
-    color: white;
-    background: var(--offers-dark);
-    border-radius: 8px;
+.offers-page a:focus-visible {
+  outline: 3px solid var(--offers-blue);
+  outline-offset: 4px;
 }
 
-.skip-link:focus {
-    top: 16px;
+/* ---------- INTRODUCTION ---------- */
+
+.offers-hero {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(4rem, 8vw, 7rem) 1.5rem;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(242, 194, 48, 0.25),
+      transparent 28rem
+    ),
+    var(--offers-paper);
 }
 
-/* INTRODUCTION */
-
-.offers-intro {
-    position: relative;
-    isolation: isolate;
-    padding: 85px 24px 90px;
-    text-align: center;
-    background: var(--offers-sage);
+.offers-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 68rem;
+  margin: 0 auto;
 }
 
-.offers-intro::before,
-.offers-intro::after {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    width: 190px;
-    height: 190px;
-    border-radius: 50%;
-    opacity: 0.14;
+.offers-kicker {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--offers-green);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.offers-intro::before {
-    top: -65px;
-    left: -55px;
-    background: var(--offers-green);
+.offers-hero h1 {
+  max-width: 17ch;
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
 }
 
-.offers-intro::after {
-    right: -55px;
-    bottom: -75px;
-    background: var(--offers-yellow);
+.offers-hero__inner > p {
+  max-width: 42rem;
+  margin-bottom: 1.8rem;
+  color: var(--offers-muted);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  line-height: 1.8;
 }
 
-.offers-eyebrow {
-    display: inline-block;
-    margin-bottom: 12px;
-    color: var(--offers-green);
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+.offers-hero__stripes {
+  position: absolute;
+  right: -4rem;
+  bottom: -3.5rem;
+  width: min(35rem, 65vw);
+  height: 1.1rem;
+  background: linear-gradient(
+    90deg,
+    var(--offers-green) 0 20%,
+    var(--offers-yellow) 20% 40%,
+    var(--offers-blue) 40% 60%,
+    var(--offers-red) 60% 80%,
+    var(--offers-black) 80% 100%
+  );
+  transform: rotate(-35deg);
+  transform-origin: center;
+  box-shadow: 0 0 1rem rgba(20, 32, 29, 0.15);
 }
 
-.offers-intro h1 {
-    margin: 0 0 18px;
-    color: var(--offers-dark);
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    line-height: 1.05;
+/* ---------- BOUTONS ---------- */
+
+.offers-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.1rem;
+  padding: 0.85rem 1.3rem;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.offers-intro > p {
-    max-width: 720px;
-    margin: 0 auto;
-    color: var(--offers-muted);
-    font-size: 1.12rem;
-    line-height: 1.8;
+.offers-button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1.2rem rgba(20, 32, 29, 0.16);
 }
 
-/* BACS DE TRI */
-
-.bins-purchase {
-    display: grid;
-    grid-template-columns: 180px minmax(0, 1fr);
-    align-items: center;
-    gap: 35px;
-    width: min(1100px, calc(100% - 40px));
-    margin: 65px auto;
-    padding: 42px;
-    border: 3px solid var(--offers-yellow);
-    border-radius: var(--offers-radius);
-    background:
-        linear-gradient(120deg, rgba(242, 194, 48, 0.17), transparent 65%),
-        var(--offers-white);
-    box-shadow: var(--offers-shadow);
+.offers-button--green {
+  color: #fff;
+  background: var(--offers-green);
 }
 
-.bins-illustration {
-    display: grid;
-    place-items: center;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    border-radius: 36px;
-    color: var(--offers-dark);
-    background: var(--offers-yellow);
-    transform: rotate(-4deg);
+.offers-button--blue {
+  color: #fff;
+  background: var(--offers-blue);
 }
 
-.bins-illustration span {
-    font-size: 5rem;
-    font-weight: 800;
+.offers-button--red {
+  color: #fff;
+  background: var(--offers-red);
 }
 
-.offer-tag {
-    display: inline-block;
-    padding: 7px 12px;
-    border-radius: 50px;
-    color: var(--offers-dark);
-    background: var(--offers-yellow);
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+.offers-button--dark {
+  color: #fff;
+  background: var(--offers-black);
 }
 
-.bins-purchase h2 {
-    margin: 14px 0 10px;
-    color: var(--offers-dark);
-    font-size: clamp(1.7rem, 3vw, 2.5rem);
+.offers-button--light {
+  color: var(--offers-ink);
+  background: #fff;
+  border-color: #fff;
 }
 
-.bins-purchase-content > p:not(.bins-price) {
-    max-width: 650px;
-    line-height: 1.7;
+/* ---------- ACHAT DES BACS ---------- */
+
+.bins-offer {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.8fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  width: min(68rem, calc(100% - 3rem));
+  margin: clamp(3rem, 7vw, 5rem) auto;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 2px solid var(--offers-yellow);
+  border-radius: 1.2rem;
+  background: #f9f5e6;
+  box-shadow: 0 0.7rem 2rem rgba(20, 32, 29, 0.08);
 }
 
-.bins-price {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 8px;
-    margin: 20px 0;
+.bins-offer__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 14rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: var(--offers-yellow);
+  text-align: center;
 }
 
-.bins-price strong {
-    color: var(--offers-dark);
-    font-size: 2.5rem;
-    font-weight: 900;
+.bins-offer__symbol {
+  display: grid;
+  place-items: center;
+  width: 7rem;
+  height: 7rem;
+  border: 3px solid rgba(20, 32, 29, 0.18);
+  border-radius: 50%;
+  color: var(--offers-ink);
+  font-size: 4.5rem;
+  line-height: 1;
 }
 
-.bins-price span {
-    color: var(--offers-muted);
+.bins-offer__caption {
+  color: var(--offers-ink);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
-/* TITRES DES SECTIONS */
-
-.plans-section {
-    width: min(1200px, calc(100% - 40px));
-    margin: 90px auto;
+.offers-label {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 99rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.section-heading {
-    max-width: 760px;
-    margin: 0 auto 42px;
-    text-align: center;
+.offers-label--yellow {
+  color: var(--offers-ink);
+  background: var(--offers-yellow);
 }
 
-.section-heading h2 {
-    margin: 0 0 15px;
-    color: var(--offers-dark);
-    font-size: clamp(2rem, 4vw, 3rem);
+.bins-offer__content h2 {
+  margin: 1rem 0 0.75rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  line-height: 1.1;
 }
 
-.section-heading p {
-    color: var(--offers-muted);
-    line-height: 1.8;
+.bins-offer__content > p {
+  max-width: 38rem;
+  margin-bottom: 1rem;
+  color: var(--offers-muted);
+  line-height: 1.75;
 }
 
-/* CARTES D'ABONNEMENT */
-
-.plans-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: stretch;
-    gap: 25px;
+.bins-offer__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.65rem;
+  margin: 1.4rem 0 1.5rem;
 }
 
-.plan-card {
-    position: relative;
-    display: flex;
+.bins-offer__price strong {
+  color: var(--offers-ink);
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.bins-offer__price span {
+  color: var(--offers-muted);
+}
+
+/* ---------- TITRE DES ABONNEMENTS ---------- */
+
+.plans {
+  width: min(72rem, calc(100% - 3rem));
+  margin: clamp(4rem, 8vw, 6rem) auto;
+  scroll-margin-top: 2rem;
+}
+
+.offers-section-heading {
+  max-width: 48rem;
+  margin: 0 auto 2.8rem;
+  text-align: center;
+}
+
+.offers-section-heading h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.offers-section-heading > p {
+  margin-bottom: 0;
+  color: var(--offers-muted);
+  line-height: 1.8;
+}
+
+/* ---------- CARTES ---------- */
+
+.plans__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.3rem;
+}
+
+.plan {
+  --plan-color: var(--offers-green);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.65rem;
+  overflow: hidden;
+  border: 2px solid color-mix(in srgb, var(--plan-color) 35%, white);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 0.65rem 1.8rem rgba(20, 32, 29, 0.08);
+}
+
+.plan::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0.5rem;
+  content: "";
+  background: var(--plan-color);
+}
+
+.plan--starter {
+  --plan-color: var(--offers-green);
+}
+
+.plan--premium {
+  --plan-color: var(--offers-blue);
+}
+
+.plan--vip {
+  --plan-color: var(--offers-red);
+  border-color: color-mix(in srgb, var(--offers-red) 35%, white);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(242, 194, 48, 0.13),
+      transparent 48%
+    ),
+    #fff;
+}
+
+.plan--vip::before {
+  background: linear-gradient(
+    90deg,
+    var(--offers-red) 0 72%,
+    var(--offers-yellow) 72% 100%
+  );
+}
+
+.plan__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  margin: 0.35rem 0 1.5rem;
+}
+
+.plan__number {
+  display: grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  background: var(--plan-color);
+  font-weight: 800;
+}
+
+.plan--vip .plan__number {
+  color: var(--offers-ink);
+  background: var(--offers-yellow);
+}
+
+.plan__tag {
+  padding: 0.35rem 0.65rem;
+  border-radius: 99rem;
+  color: var(--offers-ink);
+  background: #edf0eb;
+  font-size: 0.73rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.plan h3 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.plan__intro {
+  min-height: 3.2rem;
+  margin-bottom: 1.25rem;
+  color: var(--offers-muted);
+  line-height: 1.65;
+}
+
+.plan__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #e0e6df;
+}
+
+.plan__price strong {
+  color: var(--offers-ink);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.plan__price span {
+  color: var(--offers-muted);
+}
+
+.plan__summary {
+  margin: 1rem 0;
+  color: var(--plan-color);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.plan__features {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0 0 1.8rem;
+  padding: 0;
+  list-style: none;
+}
+
+.plan__features li {
+  position: relative;
+  padding-left: 1.7rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.plan__features li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--plan-color);
+  content: "✓";
+  font-weight: 800;
+}
+
+.plan--vip .plan__features li::before {
+  content: "★";
+}
+
+.plan__button {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* ---------- DÉTAILS DES FORMULES ---------- */
+
+.plan-detail {
+  --detail-color: var(--offers-green);
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  position: relative;
+  width: min(68rem, calc(100% - 3rem));
+  margin: 2rem auto;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #eef3ed;
+  scroll-margin-top: 2rem;
+}
+
+.plan-detail::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.55rem;
+  content: "";
+  background: var(--detail-color);
+}
+
+.plan-detail--starter {
+  --detail-color: var(--offers-green);
+}
+
+.plan-detail--premium {
+  --detail-color: var(--offers-blue);
+}
+
+.plan-detail--vip {
+  --detail-color: var(--offers-red);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(242, 194, 48, 0.13),
+      transparent 60%
+    ),
+    #eef3ed;
+}
+
+.plan-detail__number {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1.2rem;
+  color: #fff;
+  background: var(--detail-color);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.plan-detail--vip .plan-detail__number {
+  box-shadow: 0.35rem 0.35rem 0 var(--offers-yellow);
+}
+
+.plan-detail__content {
+  min-width: 0;
+}
+
+.plan-detail__content h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.plan-detail__content > p {
+  line-height: 1.8;
+}
+
+.plan-detail__content > p:not(.plan-detail__price) {
+  max-width: 52rem;
+}
+
+.plan-detail__content ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.4rem 0;
+  padding-left: 1.35rem;
+  line-height: 1.7;
+}
+
+.plan-detail__note {
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--offers-yellow);
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: rgba(255, 255, 255, 0.75);
+  font-size: 0.93rem;
+}
+
+.plan-detail__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.plan-detail__price {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.plan-detail__price span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* ---------- APPEL À L'ACTION ---------- */
+
+.offers-contact {
+  position: relative;
+  isolation: isolate;
+  margin-top: clamp(4rem, 8vw, 6rem);
+  padding: clamp(3.5rem, 8vw, 5.5rem) 1.5rem;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(135deg, #1f6b4c, #124230);
+  text-align: center;
+}
+
+.offers-contact__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.offers-contact .offers-kicker {
+  color: var(--offers-yellow);
+}
+
+.offers-contact h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+}
+
+.offers-contact p {
+  max-width: 40rem;
+  margin: 0 auto 1.7rem;
+  color: #d6e8de;
+  line-height: 1.8;
+}
+
+.offers-contact__stripes {
+  position: absolute;
+  z-index: 0;
+  right: -4rem;
+  bottom: -3rem;
+  width: min(30rem, 65vw);
+  height: 0.8rem;
+  background: linear-gradient(
+    90deg,
+    var(--offers-green) 0 20%,
+    var(--offers-yellow) 20% 40%,
+    var(--offers-blue) 40% 60%,
+    var(--offers-red) 60% 80%,
+    var(--offers-black) 80% 100%
+  );
+  transform: rotate(-35deg);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 62rem) {
+  .plans__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .plan--vip {
+    grid-column: 1 / -1;
+  }
+
+  .plan--vip .plan__features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.2rem;
+  }
+
+  .plan__intro {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 48rem) {
+  .offers-hero {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .bins-offer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: calc(100% - 2rem);
+    margin: 2.5rem auto;
+    padding: 1.25rem;
+  }
+
+  .bins-offer__visual {
+    min-height: 11rem;
+  }
+
+  .bins-offer__symbol {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 3.5rem;
+  }
+
+  .plans {
+    width: calc(100% - 2rem);
+    margin: 3.5rem auto;
+  }
+
+  .plans__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plan--vip {
+    grid-column: auto;
+  }
+
+  .plan--vip .plan__features {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plan {
+    padding: 1.4rem;
+  }
+
+  .plan-detail {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    width: calc(100% - 2rem);
+    padding: 1.5rem 1.25rem 1.5rem 1.5rem;
+  }
+
+  .plan-detail__number {
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 0.9rem;
+    font-size: 1.5rem;
+  }
+
+  .plan-detail__bottom {
+    align-items: flex-start;
     flex-direction: column;
-    min-width: 0;
-    padding: 30px;
-    overflow: hidden;
-    border: 2px solid transparent;
-    border-radius: var(--offers-radius);
-    background: var(--offers-white);
-    box-shadow: var(--offers-shadow);
+  }
 }
 
-.plan-card::before {
-    position: absolute;
-    top: 0;
-    left: 0;
+@media (max-width: 24rem) {
+  .offers-hero,
+  .offers-contact {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .plan__top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .offers-button {
     width: 100%;
-    height: 9px;
-    content: "";
+  }
 }
 
-.plan-starter {
-    border-color: rgba(47, 125, 79, 0.30);
-}
-
-.plan-starter::before {
-    background: var(--offers-green);
-}
-
-.plan-premium {
-    border-color: rgba(42, 98, 168, 0.35);
-}
-
-.plan-premium::before {
-    background: var(--offers-blue);
-}
-
-.plan-vip {
-    border-color: rgba(192, 57, 43, 0.35);
-    background:
-        linear-gradient(150deg, rgba(229, 187, 80, 0.13), transparent 55%),
-        var(--offers-white);
-}
-
-.plan-vip::before {
-    background: linear-gradient(
-        90deg,
-        var(--offers-red) 0%,
-        var(--offers-red) 65%,
-        var(--offers-gold) 65%,
-        var(--offers-gold) 100%
-    );
-}
-
-.plan-card-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin: 5px 0 25px;
-}
-
-.plan-number {
-    display: grid;
-    place-items: center;
-    width: 43px;
-    height: 43px;
-    border-radius: 13px;
-    color: var(--offers-white);
-    font-weight: 900;
-}
-
-.plan-starter .plan-number {
-    background: var(--offers-green);
-}
-
-.plan-premium .plan-number {
-    background: var(--offers-blue);
-}
-
-.plan-vip .plan-number {
-    color: var(--offers-dark);
-    background: var(--offers-gold);
-}
-
-.plan-label {
-    padding: 7px 10px;
-    border-radius: 50px;
-    background: #f0f1ef;
-    color: var(--offers-dark);
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-align: center;
-}
-
-.plan-card h3 {
-    margin: 0 0 10px;
-    color: var(--offers-dark);
-    font-size: 2rem;
-}
-
-.plan-description {
-    min-height: 50px;
-    margin: 0 0 20px;
-    color: var(--offers-muted);
-    line-height: 1.6;
-}
-
-.plan-price {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0 0 25px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e7e9e6;
-}
-
-.plan-price strong {
-    color: var(--offers-dark);
-    font-size: clamp(2.3rem, 4vw, 3rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-}
-
-.plan-price span {
-    color: var(--offers-muted);
-}
-
-.plan-features {
-    display: grid;
-    gap: 15px;
-    margin: 0 0 30px;
-    padding: 0;
-    list-style: none;
-}
-
-.plan-features li {
-    position: relative;
-    padding-left: 28px;
-    line-height: 1.55;
-}
-
-.plan-features li::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-weight: 900;
-    font-size: 1.05rem;
-}
-
-.plan-starter .plan-features li::before {
-    content: "✓";
-    color: var(--offers-green);
-}
-
-.plan-premium .plan-features li::before {
-    content: "✓";
-    color: var(--offers-blue);
-}
-
-.plan-vip .plan-features li::before {
-    content: "★";
-    color: var(--offers-red);
-}
-
-.plan-card .offer-button {
-    width: 100%;
-    margin-top: auto;
-}
-
-/* BOUTONS */
-
-.offer-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 49px;
-    padding: 13px 22px;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    font: inherit;
-    font-weight: 800;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.offer-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(34, 40, 43, 0.15);
-}
-
-.offer-button:focus-visible {
-    outline: 3px solid var(--offers-dark);
-    outline-offset: 4px;
-}
-
-.button-yellow {
-    color: var(--offers-dark);
-    background: var(--offers-yellow);
-}
-
-.button-green {
-    color: var(--offers-white);
-    background: var(--offers-green);
-}
-
-.button-blue {
-    color: var(--offers-white);
-    background: var(--offers-blue);
-}
-
-.button-red {
-    color: var(--offers-white);
-    background: var(--offers-red);
-}
-
-.button-light {
-    color: var(--offers-dark);
-    background: var(--offers-white);
-}
-
-/* DÉTAILS DES FORMULES */
-
-.plan-details {
-    position: relative;
-    display: grid;
-    grid-template-columns: 100px minmax(0, 1fr);
-    gap: 30px;
-    width: min(1100px, calc(100% - 40px));
-    margin: 35px auto;
-    padding: 55px;
-    overflow: hidden;
-    border-radius: var(--offers-radius);
-    background: var(--offers-sage);
-    scroll-margin-top: 35px;
-}
-
-.plan-details::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 9px;
-    height: 100%;
-    content: "";
-}
-
-.details-starter::before {
-    background: var(--offers-green);
-}
-
-.details-premium::before {
-    background: var(--offers-blue);
-}
-
-.details-vip::before {
-    background: linear-gradient(
-        180deg,
-        var(--offers-red) 0%,
-        var(--offers-red) 70%,
-        var(--offers-gold) 70%,
-        var(--offers-gold) 100%
-    );
-}
-
-.details-number {
-    display: grid;
-    place-items: center;
-    width: 82px;
-    height: 82px;
-    border-radius: 22px;
-    color: var(--offers-white);
-    font-size: 2rem;
-    font-weight: 900;
-}
-
-.details-starter .details-number {
-    background: var(--offers-green);
-}
-
-.details-premium .details-number {
-    background: var(--offers-blue);
-}
-
-.details-vip .details-number {
-    color: var(--offers-white);
-    background: var(--offers-red);
-    box-shadow: 5px 5px 0 var(--offers-gold);
-}
-
-.details-content h2 {
-    margin: 0 0 18px;
-    color: var(--offers-dark);
-    font-size: clamp(1.8rem, 4vw, 2.7rem);
-}
-
-.details-content > p {
-    line-height: 1.8;
-}
-
-.details-content ul {
-    display: grid;
-    gap: 12px;
-    margin: 25px 0;
-    padding-left: 22px;
-    line-height: 1.7;
-}
-
-.details-price {
-    color: var(--offers-dark);
-    font-size: 1.6rem;
-    font-weight: 900;
-}
-
-.details-note {
-    padding: 15px 18px;
-    border-left: 4px solid var(--offers-yellow);
-    border-radius: 0 10px 10px 0;
-    background: rgba(255, 255, 255, 0.75);
-    font-size: 0.93rem;
-}
-
-/* APPEL À L'ACTION */
-
-.offers-cta {
-    position: relative;
-    margin-top: 90px;
-    padding: 75px 24px;
-    color: var(--offers-white);
-    background:
-        linear-gradient(120deg, transparent 0 70%, rgba(242, 194, 48, 0.18) 70% 78%, transparent 78%),
-        var(--offers-dark);
-    text-align: center;
-}
-
-.offers-cta .offers-eyebrow {
-    color: var(--offers-yellow);
-}
-
-.offers-cta h2 {
-    max-width: 800px;
-    margin: 0 auto 18px;
-    font-size: clamp(2rem, 4vw, 3rem);
-}
-
-.offers-cta p {
-    max-width: 680px;
-    margin: 0 auto 28px;
-    color: rgba(255, 255, 255, 0.83);
-    line-height: 1.8;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 950px) {
-    .plans-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .plan-vip {
-        grid-column: 1 / -1;
-    }
-
-    .plan-vip .plan-features {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 25px;
-    }
-
-    .bins-purchase {
-        grid-template-columns: 130px minmax(0, 1fr);
-        gap: 25px;
-        padding: 30px;
-    }
-
-    .bins-illustration {
-        width: 120px;
-        height: 120px;
-    }
-
-    .bins-illustration span {
-        font-size: 4rem;
-    }
-}
-
-@media (max-width: 650px) {
-    .offers-intro {
-        padding: 60px 20px;
-    }
-
-    .bins-purchase {
-        grid-template-columns: 1fr;
-        width: calc(100% - 30px);
-        margin: 40px auto;
-        padding: 25px;
-        text-align: center;
-    }
-
-    .bins-price {
-        justify-content: center;
-    }
-
-    .plans-section {
-        width: calc(100% - 30px);
-        margin: 60px auto;
-    }
-
-    .plans-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .plan-vip {
-        grid-column: auto;
-    }
-
-    .plan-vip .plan-features {
-        grid-template-columns: 1fr;
-    }
-
-    .plan-description {
-        min-height: 0;
-    }
-
-    .plan-details {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        width: calc(100% - 30px);
-        padding: 30px 25px;
-    }
-
-    .details-number {
-        width: 65px;
-        height: 65px;
-        border-radius: 18px;
-        font-size: 1.6rem;
-    }
-
-    .offers-cta {
-        margin-top: 60px;
-        padding: 60px 22px;
-    }
-}
-
+/* Respect des préférences d'accessibilité */
 @media (prefers-reduced-motion: reduce) {
-    .offers-page *,
-    .offers-page *::before,
-    .offers-page *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-        animation: none !important;
-    }
+  .offers-page .offers-button {
+    transition: none;
+  }
+
+  .offers-page .offers-button:hover {
+    transform: none;
+  }
 }
