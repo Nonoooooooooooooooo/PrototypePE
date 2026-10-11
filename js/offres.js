@@ -1,31 +1,31 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Met à jour automatiquement l'année du copyright.
-    const yearElement = document.getElementById("copyright-year");
+  // Mise à jour de l'année dans le footer commun.
+  const annee = document.getElementById("annee");
 
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
+  if (annee) {
+    annee.textContent = new Date().getFullYear();
+  }
 
-    // Améliore la navigation clavier vers les détails des offres.
-    const detailLinks = document.querySelectorAll(
-        '.plan-card a[href^="#details-"]'
-    );
+  // Navigation vers les détails des formules.
+  const liensDetails = document.querySelectorAll(
+    '.offers-page a[href^="#details-"]'
+  );
 
-    detailLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            const targetId = link.getAttribute("href");
-            const target = document.querySelector(targetId);
+  liensDetails.forEach((lien) => {
+    lien.addEventListener("click", () => {
+      const cibleId = lien.getAttribute("href");
+      const cible = document.querySelector(cibleId);
 
-            if (!target) {
-                return;
-            }
+      if (!cible) {
+        return;
+      }
 
-            target.setAttribute("tabindex", "-1");
-
-            window.setTimeout(() => {
-                target.focus({ preventScroll: true });
-            }, 350);
-        });
+      // Le navigateur gère le défilement via l'ancre.
+      // Le focus est déplacé vers la section pour l'accessibilité.
+      window.setTimeout(() => {
+        cible.focus({ preventScroll: true });
+      }, 0);
     });
+  });
 });
